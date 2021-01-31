@@ -1,0 +1,14 @@
+
+---+ Focus Merging Details
+
+
+There are 8 types of focus qualities, from lowest to highest: Raw, Fractured, Rough, Jagged, Smooth, Clear, Pristine, Exquisite. A raw focus can't be used for anything else than being enchanted with a special purpose [[FocusEnchantingDetails][(Focus Enchanting Details)]], it is also the only quality type which doesn't prefix any focus name.
+
+The higher the quality of a focus, the higher the possible bonus (or malus) it can bestow upon enchanting. While Fractured quality is more than sufficient for early enchantments they lack power for higher ones. To be usable for advanced enchantments, they can be merged. <br>Each two foci of the same quality and same type (power type as well as raw material type) can be merged into one single focus of higher quality. To do this, put two foci into the crafting window and enter '/enchant' into your chatbox.
+
+Unlike the other enchanting applications, this one actually requires the enchanter to have a specific skill level for the merge. Needed skill levels are as follows:
+
+	Merge 2 Fractured to 1 Rough : skill level 1 <br>	Merge 2 Rough to 1 Jagged : skill level 60 <br>	Merge 2 Jagged to 1 Smooth : skill level 120 <br>	Merge 2 Smooth to 1 Clear : skill level 180 <br>	Merge 2 Clear to 1 Pristine : skill level 240 <br>	Merge 2 Pristine to 1 Exquisite : skill level 300
+
+
+A focus merge can't fail due to randomness. If the enchanter has the prerequisites, it will succeed.

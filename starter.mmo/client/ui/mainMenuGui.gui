@@ -1,0 +1,223 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(MainMenuGui) {
+   profile = "GuiContentProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 8";
+   visible = "1";
+   bitmap = "~/client/ui/mom_menu_background";
+   useVariable = "0";
+   tile = "0";
+      helpTag = "0";
+
+   new GuiBitmapBorderCtrl() {
+      profile = "MoMSolidBorderProfile";
+      horizSizing = "relative";
+      vertSizing = "relative";
+      position = "288 320";
+      extent = "440 352";
+      minExtent = "8 2";
+      visible = "1";
+
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "136 57";
+         extent = "152 40";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.setContent(SinglePlayerGui);";
+         text = "SINGLE PLAYER";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            helpTag = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "136 9";
+         extent = "152 40";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Py::OnMultiplayer();";
+         text = "PLAY ONLINE";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            helpTag = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "136 104";
+         extent = "152 40";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.pushDialog(optionsDlg);";
+         text = "OPTIONS";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            helpTag = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "136 296";
+         extent = "152 40";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Py::OnQuit();";
+         text = "QUIT";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            helpTag = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "136 152";
+         extent = "152 40";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Py::OnPatch();";
+         text = "LIVE UPDATE";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            helpTag = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "136 248";
+         extent = "152 40";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.pushDialog(CreditsWnd);";
+         text = "CREDITS";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            helpTag = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "136 200";
+         extent = "152 40";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.pushDialog(RegisterDlg);";
+         text = "REGISTER";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            helpTag = "0";
+      };
+      new GuiTextCtrl(NPN_ONE) {
+         profile = "MoMStatText";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "296 20";
+         extent = "127 18";
+         minExtent = "8 2";
+         visible = "0";
+         text = "< No Purchase Necessary";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextCtrl(NPN_TWO) {
+         profile = "MoMStatText";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "296 209";
+         extent = "127 18";
+         minExtent = "8 2";
+         visible = "0";
+         text = "< No Purchase Necessary";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiButtonCtrl(PTP_BUTTON) {
+         profile = "MenuButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "16 16";
+         extent = "104 24";
+         minExtent = "8 8";
+         visible = "0";
+         command = "Py::OnPatchToPremium();";
+         text = "PATCH TO PREMIUM";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            helpTag = "0";
+      };
+   };
+   new GuiTextCtrl(MOM_VERSION_TEXT) {
+      profile = "MoMStatText";
+      horizSizing = "relative";
+      vertSizing = "relative";
+      position = "856 672";
+      extent = "64 18";
+      minExtent = "8 2";
+      visible = "1";
+      text = "Version 1.0";
+      maxLength = "255";
+      dropShadow = "0";
+   };
+};
+//--- OBJECT WRITE END ---
+
+function ToggleEncyclopediaWnd()
+{
+  if (EncyclopediaWnd.isAwake())
+     canvas.popDialog(EncyclopediaWnd);
+  else
+     canvas.pushDialog(EncyclopediaWnd);
+}
+

@@ -1,0 +1,5 @@
+%META:TOPICINFO{author="PeterThoeny" date="1006602069" format="1.0" version="1.2"}%
+%META:TOPICPARENT{name="WebHome"}%
+%SEARCH{"\.*" scope="topic" regex="on" nosearch="on"}%
+
+See also the faster WebTopicList

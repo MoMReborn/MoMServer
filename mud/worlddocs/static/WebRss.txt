@@ -1,0 +1,7 @@
+%META:TOPICINFO{author="PeterThoeny" date="1092626837" format="1.0" version="1.2"}%
+<channel rdf:about="%SCRIPTURL%/view%SCRIPTSUFFIX%/%WEB%">
+  <title>%WIKITOOLNAME%'s <nop>%WEB% web</title>
+  <link>%SCRIPTURL%/view%SCRIPTSUFFIX%/%WEB%</link>
+  <description>The <nop>%WEB% web of TWiki. TWiki is a Web-Based Collaboration Platform for the Corporate World.</description>
+%INCLUDE{"%TWIKIWEB%.WebRssBase"}%
+

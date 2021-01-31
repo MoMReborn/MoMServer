@@ -1,0 +1,321 @@
+Torque MMO Kit
+
+Versions 1.3 SP2:
+-Fixed Pets not being able to equip weapons
+-Added Reptile race to not use skills on mob.py
+-Power Wield should now work
+-Activated Bow Animation
+-Added wmrojer's Bow Animation/Arrow synch fix
+-Added No Random Loot flag for spawns
+-Added Advancement Pane speed fix
+-Added new IDE startup splash image
+-COmmented out Starting Gear items check. Caused issues with Power Wield skill.
+-Commented out AI weapons check. Caused issues with Power Wield skill.
+-Added Resource spawn flag for Harvesting type skills(Foresting, Mining, etc.)
+-Added ability to have a starting zone per Realm(Light,Dark,Monster)
+-Added Oak Tree(using Wolf as mesh) to Base zone as Harvesting example.
+-Added Tool Vendor to Base zone to be able to buy an axe.
+-Added Grey Wolf to testgame animal.py to fix new zone compile issue.
+-Added files to the testgame.agp to fix missing files in IDE.
+-Modified starting immTransform of landone and landtwo zones so you don't fall through.
+-Added USE_PNG_SVN = 1 gamesettings.py to control buildistro.py
+
+Version 1.3 SP1:
+-Modified mud/characterserver/restorecharacter.py to restore characters properly.
+-MOM Changeset 1616
+  -wxPython now gets enforced where required (previously missing the argument would lead to a crash).
+  -Replaced pollreactor by threadedselectreactor, seems better supported than pollreactor.
+  -Made pythonw calls independent of install location.
+  -Commented out halloween ticket code.
+-Added Xerves modifications to simplify kit setup.  Thanks Xerves!
+
+Version 1.3:
+-Added a File Changed file to know which files changed.
+- Changeset 1583
+- MoM Changesets 1576+1577+1592+1594+1595+1598
+  -Made worldimp code support non-win systems.
+  -Disenchanted items now get flags, quality and worth reset properly. 
+  -Fixed a bug in GMTool on exit.
+  -Revised gmtool2app, works again.
+  -Updated version count on GMTool.
+  -Added a '/imm checkwealth' immortal command. The command requires a valid target and lists the targets wealth in all realms.
+  -Added a '/imm setwealth <realm = light/darkness/monster> <amount in tin>' immortal command. The command requires a valid target and logs command useage.
+  -Modified visibility check so a mob needs a higher or equal see invisibility value to see a target with a specific (in)visibility value.
+  -Added the '/gm invis <on/off/nothing to simply toggle>' guardian command. This should render GMs invisible to even see invisible spells/skills.
+  -Guardians and Immortals no longer get announced when logging in or zoning.
+
+
+Version 1.2:
+- Can now be switched off: Register data to be sent only via email.
+- Optional by uncommenting in newplayeremail.py: Change to make email system gmail compatible.
+- MoM Changeset 1540.
+- MoM Changeset 1556.
+- New pytge.pyd+pytge.so:
+  - Removed water block reordering again, the fix doesn't work with multiple water blocks in a zone.
+  - waterblock fix
+  - fix for scaled DTS objects not getting lighted correctly
+  - fix for scaled DTS objects not clipped correctly
+  - fix for correct function of RenderBans
+- Some optimization.
+- cleanup, bugfixes, improvements
+
+Version 1.1-SP4:
+- Added new monster and new 2H weapon. (Thanks to kalitre for donating.)
+- Added some buildings.
+- MoM Changesets 1463+1476+1482.
+- MoM Changeset 1510 (partially).
+- Avoid load screen on logout.
+- Fix needed for empty starting gear.
+- Changed register data to be sent only via email.
+- Optimized registration e-mail + password request e-mail.
+- Better restart message.
+- MoM Changeset 1512.
+- MoM Changeset 1520.
+- MoM Changeset 1524.
+- Directional check for ALL spells that have a target.
+- Starting gear now correctly considers wearability conditions.
+- Corrected the mission files to ensure proper naming/description that is needed to find the mission loading images.
+- Corrected the loading images for the example zones.
+- Fixed mobs not respawning in some zones when the game has an even zonecount.
+- Some optimization.
+- cleanup, bugfixes, improvements
+
+Version 1.1-SP3:
+- Removed "support@prairiegames.com" references in emails.
+- Removed encyclopedia link from starting page.
+- Reduced damage for kick skill.
+- Removed hardcoded tolerance mod for ai move threshold, should fix some supersized mobs stopping out of range.
+- Disabled jumping while not being able to move.
+- MoM Changeset 1271.
+- Correct windows QUIT message handling.
+- Unified camp/quit/cancel/logout handling back to server select screen (MP) or world load screen (SP).
+- Fixed relog isssue due to missing player logout when leaving client from character select screen (logout, kill, ALT-F4).
+- MoM Changeset 1283.
+- MoM Changesets 1284+1292.
+- MoM Changesets 1304+1305.
+- MoM Changesets 1308+1310.
+- MoM Changesets 1311+1313.
+- MoM Changesets 1318+1319+1320.
+- MoM Changeset 1328.
+- MoM Changesets 1333+1335+1339.
+- MoM Changesets 1344+1345.
+- MoM Changeset 1350.
+- MoM Changesets 1352+1353+1354+1355+1356.
+- Fix for GMServer.
+  - corrected creating WorldDaemon role
+  - removed md5 password encoding due to UTF-8 conflicts when storing it to sqlite (should be resolved later on ...)
+  + correct worldname for testgame.mmo
+- Positional Code: isFacing(otherMob), isBehind(otherMob) Thanks wmrojer.
+- FreeWorld 3D raw texture processor.
+- Small fix to upgradedb.py.
+- Small fix to IDE because default GMServer settings are missing from new projects cfg files.
+- MoM Changeset 1415.
+- MoM Changesets 1421+1425.
+- new pytge.pyd and pytge.so
+- cleanup, bugfixes, improvements
+
+Version 1.1-SP2:
+- MoM Changesets 1108+1109.
+- Added skill "Dual Wield" as trainable.
+- Added skill "Dual Wield" to trainer (demo game).
+- Added functions spawn.addSkill and spawn.clearSkills to dbdict (for use with mobs).
+- Modified mob.py->updateClassStats to add skill "Dual Wield" to mob when available.
+- Modified mob.py->tick() to call function initMob prior to initLoot because early initialization is necessary.
+- Modified mob.py->updateClassStats to correctly select mobs skills instead of just giving them all.
+- Modified mob.py->equipItem to allow only correct combinations of shield, 1H primary weapon, 1H secondary weapon
+  and 2H weapon (this part is intended for NPCs and mobs).
+- Modified character.py->equipItem to allow only correct combinations of shield, 1H primary weapon, 1H secondary weapon
+  and 2H weapon (this part "onInvSlotAlt->equipItem with change logic" is intended for player characters and double
+  clicking items in the inventory).
+- Modified character.py->onInvSlot to allow only correct combinations of shield, 1H primary weapon, 1H secondary weapon
+  and 2H weapon (this part "onInvSlot with change logic" is intended for player characters when working with items
+  in the inventory).
+- The aggrorange example wolves now get the kick skill.
+- Broadsword item added (sorry, looks like the Longsword due to lack of open source assets).
+- Some vendors now wear equipment: Scroll Vendor="Longssword + Shield", Weapon Vendor="Longsword + Longsword" (with Dual Wield skill)
+  and Skill Trainer="Broadsword". Stone Vendor, Food Vendor and Wolfman got the Dual Wield skill and random but correct combinations
+  of Longsword, Longsword, Broadsword and Shield (in this equip order).
+- Removed check in denymonster against player being already in the zone.
+- Removed deletion of player monsters as it won't fully work anyway (has to be done manually).
+- Added checks in grantmonster and denymonster so that player has to be logged in (the modified playerbuffer
+  is saved only on logout).
+- Character DB and World DB receive commit (without ticking backup count) on player logout to immediately persist data.
+- Relog is now possible immediately because immediate Character DB and World DB commit avoids rollback.
+- Starting the client with client.pyw renamed to client.py reveals some error messages due to left over references that cause improper
+- garbage collection and therefore occur from twisted when finally quitting the client.
+- Case 1: start, login, load world, log out, quit (singleplayer + multiplayer)
+-   => Exception exceptions.AttributeError StringIO
+-      Fix: In worldGui.py->OnWorldLogut free reference PLAYERMIND.perspective for singleplayer + multiplayer.
+- Case 2: start, login, load world, enter world, camp+quit or direct quit (singleplayer + multiplayer)
+-   => Exception exceptions.AttributeError StringIO
+-      Fix: In playermind.py->camp free reference PlayerPerspective for singleplayer + multiplayer. Had to do it by
+-           writing a seperate function ClearPlayerPerspective because direct importing of PlayerPerspective did not work.
+-      + Some cleanup for disconnecting the broker and freeing the perspectives reference.
+-   => Exception exceptions.AttributeError CharacterInfoGhost
+-      Fix: Free more CharacterInfo references in various dialogs.
+-      + Some more cleanup for freeing different cacheables.
+- MoM Changesets 1142-1146.
+- MoM Changesets 1171,1174-1176.
+- MoM Changesets 1188,1189 and 1191.
+- MoM Changesets 1194,1197 and 1198.
+- MoM Changesets 1203,1211,1213,1218+1219.
+- MoM Changesets 1225+1226.
+- MoM Changeset 1244.
+- Early player logout in camp/quit with callback wait for completion to avoid unhandled deferreds.
+- Early stop of players simmind in camp/quit to avoid unhandled deferreds.
+- Modified simmind->destroyserver error handling because duplicate cancelling may now happen intentionally.
+- Reordered ShutdownEmbeddedWorld() and TGEEval("disconnect();") to avoid unhandled deferreds.
+- Introduced minimal callLater delay to process messages before final camp/quit to avoid unhandled deferreds.
+- Fixed error in patcher that caused problems when downloading two files in parallel.
+- Fixed error that prevented trade window cancel.
+- Set default monster respawn rate in single player to match multiplayer.
+- MoM Changeset 1265.
+- cleanup, bugfixes, improvements
+
+Version 1.1-SP1:
+- Added zones to clusterlist in gamesettings.py.
+- Upgrade.bat now makes copy from the character db before overwriting it.
+- Don't scan for "soundBeginDuration" sound in contentsifter.py.
+- Show block time until relog is possible.
+- Removed unnecessary messages, fixed typos.
+- Removed error on zoning with CmdTargetId.
+- Clean character from running database after creation.
+- Removed constraints on denymonster concerning immortal rights.
+- Removed check in denymonster if Player is entering the world.
+- Removed duplicate reactor stop on exit.
+- Changed defer callback handling for queued calls to avoid assertion error in defer.py when throttling jumps in.
+- Delete the old text in the new character deletion dialog when opening it.
+- Set the focus to the text field.
+- Forbid insertion of a container into another container.
+- Fix to container: missing attribute "container" in ItemContainerWnd init.
+- Last used container window will no longer reopen when leveling.
+- Bugfix for loot tables with more than 16 items (should only happen on testing builds).
+- Set the item's slot to be that of the cursor when splitting by double click.
+- cleanup, bugfixes, improvements
+
+Version 1.1:
+- updated pytge.pyd (bugfixes, improvements)
+  -> Removed blending again because it don't work correctly (weird effects when multiple textures overlay in trees or trees stand before DIFs).
+- updated pytge.so
+- tool cleanup
+- asset cleanup
+- Merged in SVN Rev 1052 (only those parts that were not already in)
+- Merged in SVN Rev 1053+1054
+- Merged in SVN Rev 1059+1060
+- Merged in SVN Rev 1064+1065
+- added info for starting a new game
+- cleanup, bugfixes, improvements
+
+Version 1.0-SP2:
+- updated pytge.pyd (bugfixes, improvements)
+  -> only bump normal into worldspace for dts shapes for now
+  -> added blending back in
+- updated kfrench16 MMO data editor
+- updated pytge.so
+- Merged in SVN Rev 933
+- Merged in SVN Rev 938 (only those parts that were not already in)
+- Merged in SVN Rev 940+942
+- Merged in SVN Rev 976,978,983+985 (very interesting: containers !!!)
+- added sample container items
+- added sample for AICollision flag
+- cleanup, bugfixes, improvements
+
+Version 1.0-SP1:
+- MMO Kit editor update
+- Merged in SVN Revs 888+894
+- Merged in SVN Revs 897,899+904
+- Merged in SVN Revs 909+912
+- updated pytge.so
+- cleanup, bugfixes, improvements
+
+Version 1.0:
+- programmers art: some files for spell effects
+- missing and updated data files for kfrench16 editor
+- encyclopedia cleanup
+- encyclopedia prebuild
+- Merged in SVN Revs 871,872,873+874
+- cleanup, bugfixes, improvements
+
+Version 0.4-SP1 (aka V1.0-RC2):
+- asset cleanup to complete the kit (included programmers art, renamed references, copied existing files to missing ones)
+- updated kfrench16 MMO data editor
+- support for DSQ based animations
+- included old DSQ based example models
+- Merged in SVN Revs 826 (that is up to MoM 1.26.2)
+- Merged in SVN Revs 834,835,838,839,854,855,856
+- cleanup, bugfixes, improvements
+
+Version 0.4 (aka V1.0-RC1):
+- EULA title cosmetics
+- journal and FAQ cosmetics
+- documentation update
+- path is shown as server window title
+- background image sharpened
+- new reference objects
+- programmers art: a signpost
+- programmers art: some new icons
+- added kfrench16 MMO data editor
+- added Demo Game
+- Merged in SVN Revs 781,783,791,794,796,800
+- cleanup, bugfixes, improvements
+
+Version 0.3-SP1:
+- cleanups
+- new pytge.so
+- OSX bugfix
+
+Version 0.3:
+- migration to MoM version 1.26.1
+- added Active Ports utility
+- cleanup, bugfixes, improvements
+
+Version 0.2:
+- migration to MoM version 1.25.1
+- added raffle contest work (with MySQL database access)
+- cleanup, bugfixes, improvements
+
+Version 0.1:
+- migration to MoM version 1.24.4
+- cleanup, bugfixes, improvements
+
+Version 0.0.2-SP2:
+- modification for upcoming Freeworld3D support (terrain import, texture import)
+- some scripts, tools and data for Freeworld3D support
+- project name now is a parameter to the batch files
+- disabled PC sex "neuter"
+- enabled FoD and Monster realms
+- fixed small bug in titan texture setting
+- fixed a bug for turbulence function in editor
+- cleanup
+- small bugfixes
+- small improvements
+
+Version 0.0.2-SP1:
+- added default values and gui controls for toggling player, npc and target names
+- SMTP server port is now configurable
+- fixed the client/server issues for LAN and WAN-DynIP modes
+- start in windowed mode
+- start with details very high
+- cleanup
+- small bugfixes
+- small improvements
+
+Version 0.0.2:
+- migrated to current trunk/branch version of original kit
+- added IDE
+- added database driven races
+- added asset directory changes
+- added code changes for asset directory changes
+- adding wx/OSX work
+- cleanup
+- small bugfixes
+- small improvements
+
+Version 0.0.1:
+- the system is now ready2run
+- cleanup
+- small bugfixes
+- small improvements
+
+Version 0.0.0:
+- the system is based on the Torque MMO Kit version that PG brought into SVN as rev. 12 on 2007-06-10

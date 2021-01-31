@@ -1,0 +1,160 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(EncyclopediaWnd) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(EncyclopediaWnd_Wnd) {
+      profile = "MoMSolidWndProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "76 115";
+      extent = "471 529";
+      minExtent = "407 469";
+      visible = "1";
+      text = "Encyclopedia";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(EncyclopediaWnd);";
+
+      new GuiControl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "11 58";
+         extent = "450 457";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiScrollCtrl(ENCYC_SCROLL) {
+            profile = "MoMScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 2";
+            extent = "436 444";
+            minExtent = "8 2";
+            visible = "1";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOn";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiMLTextCtrl(ENCYC_TEXT) {
+               profile = "MoMTextEditProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "2 -194";
+               extent = "412 636";
+               minExtent = "412 636";
+               visible = "1";
+               lineSpacing = "2";
+               allowColorChars = "0";
+               maxChars = "-1";
+            };
+         };
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "103 31";
+         extent = "60 24";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnEncyclopediaHome();";
+         text = "Home";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "243 31";
+         extent = "60 24";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnEncyclopediaForward();";
+         text = "Forward";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "173 31";
+         extent = "60 24";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnEncyclopediaBack();";
+         text = "Back";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "313 31";
+         extent = "60 24";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ShowEncyclopediaSearch();";
+         text = "Search";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function ENCYC_TEXT::onURL(%this,%url)
+{
+    Py::OnEncyclopediaOnURL(%url);
+}
+
+function ShowEncyclopediaSearch()
+{
+  if (EncyclopediaSearchDlg.isAwake())
+     canvas.popDialog(EncyclopediaSearchDlg);
+  else
+  {
+     canvas.pushDialog(EncyclopediaSearchDlg);
+     ENCYCLOPEDIA_SEARCH.makeFirstResponder(true);
+  }
+}
+
+PyExec("mud/client/gui/encyclopediaWnd.py");

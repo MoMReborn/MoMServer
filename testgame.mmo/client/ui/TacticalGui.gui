@@ -1,0 +1,237 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(TacticalGui) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(TacticalGui_Window) {
+      profile = "MoMWndProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "61 36";
+      extent = "353 375";
+      minExtent = "353 375";
+      visible = "1";
+      text = "Tactical";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "388 375";
+      closeCommand = "canvas.popDialog(TacticalGui);";
+
+      new GuiControl(tactical_enemies) {
+         profile = "MoMWndProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 213";
+         extent = "164 140";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiScrollCtrl(tactical_enemies_scroll) {
+            profile = "MoMScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "164 140";
+            minExtent = "8 2";
+            visible = "1";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOff";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(tactical_enemies_list) {
+               profile = "MoMTacticalText";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "1 1";
+               extent = "162 2";
+               minExtent = "8 2";
+               visible = "1";
+               command = "Py::OnEnemiesList();";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "237 28";
+         extent = "55 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Assistance";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "77 193";
+         extent = "40 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Enemies";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "78 29";
+         extent = "39 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Threats!";
+         maxLength = "255";
+      };
+      new GuiControl(tactical_threats) {
+         profile = "MoMWndProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 52";
+         extent = "164 140";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiScrollCtrl(tactical_threats_scroll) {
+            profile = "MoMScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "164 140";
+            minExtent = "8 2";
+            visible = "1";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOff";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(tactical_threats_list) {
+               profile = "MoMTacticalText";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "1 1";
+               extent = "162 2";
+               minExtent = "8 2";
+               visible = "1";
+               command = "Py::OnThreatsList();";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+      };
+      new GuiControl(tactical_allythreats) {
+         profile = "MoMWndProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "178 52";
+         extent = "164 140";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiScrollCtrl(tactical_allythreats_scroll) {
+            profile = "MoMScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "164 140";
+            minExtent = "8 2";
+            visible = "1";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOff";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(tactical_allythreats_list) {
+               profile = "MoMTacticalText";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "1 1";
+               extent = "162 2";
+               minExtent = "8 2";
+               visible = "1";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "251 192";
+         extent = "26 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Allies";
+         maxLength = "255";
+      };
+      new GuiControl(tactical_allies) {
+         profile = "MoMWndProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "178 213";
+         extent = "164 140";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiScrollCtrl(tactical_allies_scroll) {
+            profile = "MoMScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "164 140";
+            minExtent = "8 2";
+            visible = "1";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOff";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(tactical_allies_list) {
+               profile = "MoMTacticalText";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "1 1";
+               extent = "162 2";
+               minExtent = "8 2";
+               visible = "1";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+PyExec("mud/client/gui/tacticalGui.py");

@@ -1,0 +1,98 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(CharSelectGui) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiBitmapButtonCtrl(PartyWnd_CharButton1) {
+      profile = "InvButtonProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "45 12";
+      extent = "32 32";
+      minExtent = "8 2";
+      visible = "1";
+      command = "Py::OnCharButton(1);";
+      mouseOver = "0";
+      groupNum = "1";
+      buttonType = "RadioButton";
+      hasStateBitmaps = "0";
+   };
+   new GuiBitmapButtonCtrl(PartyWnd_CharButton0) {
+      profile = "InvButtonProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "5 12";
+      extent = "32 32";
+      minExtent = "8 2";
+      visible = "1";
+      command = "Py::OnCharButton(0);";
+      mouseOver = "0";
+      groupNum = "1";
+      buttonType = "RadioButton";
+      hasStateBitmaps = "0";
+   };
+   new GuiBitmapButtonCtrl(PartyWnd_CharButton3) {
+      profile = "InvButtonProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "125 12";
+      extent = "32 32";
+      minExtent = "8 2";
+      visible = "1";
+      command = "Py::OnCharButton(3);";
+      mouseOver = "0";
+      groupNum = "1";
+      buttonType = "RadioButton";
+      hasStateBitmaps = "0";
+   };
+   new GuiBitmapButtonCtrl(PartyWnd_CharButton4) {
+      profile = "InvButtonProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "165 12";
+      extent = "32 32";
+      minExtent = "8 2";
+      visible = "1";
+      command = "Py::OnCharButton(4);";
+      mouseOver = "0";
+      groupNum = "1";
+      buttonType = "RadioButton";
+      hasStateBitmaps = "0";
+   };
+   new GuiBitmapButtonCtrl(PartyWnd_CharButton5) {
+      profile = "InvButtonProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "205 12";
+      extent = "32 32";
+      minExtent = "8 2";
+      visible = "1";
+      command = "Py::OnCharButton(5);";
+      mouseOver = "0";
+      groupNum = "1";
+      buttonType = "RadioButton";
+      hasStateBitmaps = "0";
+   };
+   new GuiBitmapButtonCtrl(PartyWnd_CharButton2) {
+      profile = "InvButtonProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "85 12";
+      extent = "32 32";
+      minExtent = "8 2";
+      visible = "1";
+      command = "Py::OnCharButton(2);";
+      mouseOver = "0";
+      groupNum = "1";
+      buttonType = "RadioButton";
+      hasStateBitmaps = "0";
+   };
+};
+//--- OBJECT WRITE END ---
+
+PyExec("mud/client/gui/charSelectGui.py");

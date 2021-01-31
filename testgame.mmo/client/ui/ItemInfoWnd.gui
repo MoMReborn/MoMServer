@@ -1,0 +1,129 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ItemInfoWnd) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(ItemInfoWnd_Window) {
+      profile = "MoMWndAlwaysHLProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "159 85";
+      extent = "320 356";
+      minExtent = "233 300";
+      visible = "1";
+      text = "Information";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "233 300";
+      closeCommand = "canvas.popDialog(ItemInfoWnd);";
+
+      new GuiBitmapCtrl(ITEMINFOWND_BITMAP) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "13 32";
+         extent = "110 110";
+         minExtent = "8 2";
+         visible = "1";
+         wrap = "0";
+         modulation = "1.000000 1.000000 1.000000 1.000000";
+      };
+      new GuiScrollCtrl() {
+         profile = "MoMScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 161";
+         extent = "302 185";
+         minExtent = "8 2";
+         visible = "1";
+         willFirstRespond = "0";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+         childRelPos = "0 0";
+         childPos = "2 2";
+         contentPos = "2 2";
+
+         new GuiMLTextCtrl(ItemInfoWnd_InfoText) {
+            profile = "MoMStatText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "274 14";
+            minExtent = "8 2";
+            visible = "1";
+            lineSpacing = "2";
+            allowColorChars = "1";
+            maxChars = "-1";
+         };
+      };
+      new GuiControl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "126 33";
+         extent = "181 74";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiMLTextCtrl(ItemInfoWnd_NameText) {
+            profile = "MoMStatText";
+            horizSizing = "center";
+            vertSizing = "center";
+            position = "6 5";
+            extent = "170 14";
+            minExtent = "8 2";
+            visible = "1";
+            lineSpacing = "2";
+            allowColorChars = "1";
+            maxChars = "-1";
+         };
+      };
+      new GuiControl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "126 93";
+         extent = "181 65";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiMLTextCtrl(ItemInfoWnd_FlagsText) {
+            profile = "MoMStatText";
+            horizSizing = "center";
+            vertSizing = "top";
+            position = "1 4";
+            extent = "177 14";
+            minExtent = "8 2";
+            visible = "1";
+            lineSpacing = "2";
+            allowColorChars = "1";
+            maxChars = "-1";
+            text = " ";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+function ToggleItemInfoWnd()
+{
+  if (ItemInfoWnd.isAwake())
+     canvas.popDialog(ItemInfoWnd);
+  else
+     canvas.pushDialog(ItemInfoWnd);
+}
+
+PyExec("mud/client/gui/itemInfoWnd.py");

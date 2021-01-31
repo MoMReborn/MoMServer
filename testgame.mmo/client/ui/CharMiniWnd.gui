@@ -1,0 +1,900 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(CharMiniWnd) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(CharMiniWnd_Window) {
+      profile = "MoMWndProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "70 15";
+      extent = "121 581";
+      minExtent = "0 0";
+      visible = "1";
+      text = "Party";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "0 0";
+      closeCommand = "canvas.popDialog(CharMiniWnd);";
+
+      new GuiControl(MINIWND_CHAR5_PANE) {
+         profile = "MoMWndProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 489";
+         extent = "103 85";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiProgressCtrl(MINIWND_CHAR5_PETHEALTH) {
+            profile = "GuiPetHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 41";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetPet(5);";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR5_HEALTH) {
+            profile = "GuiHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 14";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR5_TARGETHEALTH) {
+            profile = "GuiTargetHealthBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "4 68";
+            extent = "94 14";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(5);";
+         };
+         new GuiBitmapButtonCtrl(MINIWND_CHAR5_PIC) {
+            profile = "InvButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "4 15";
+            extent = "30 30";
+            minExtent = "8 2";
+            visible = "1";
+            command = "MACROWND_CHAR5.performClick();";
+            altCommand = "MACROWND_CHAR5.performClick(); canvas.pushDialog(PartyWnd);";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            rightClickCommand = "Py::OnTargetChar(5);";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            number = "-1";
+            hasStateBitmaps = "0";
+            u0 = "0";
+            u1 = "1";
+            v0 = "0";
+            v1 = "1";
+               wrap = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR5_TARGET) {
+            profile = "MoMSmallStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "23 67";
+            extent = "56 16";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(5);";
+            text = "Target Health";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR5_NAME) {
+            profile = "MoMStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "33 -3";
+            extent = "36 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Mouser";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR5_STAMINA) {
+            profile = "GuiStaminaBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 32";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR5_MANA) {
+            profile = "GuiChiBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 23";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR5_CASTING) {
+            profile = "GuiCastingBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 41";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "0";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR5_XP1) {
+            profile = "GuiPXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 50";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR5_XP2) {
+            profile = "GuiSXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 55";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR5_XP3) {
+            profile = "GuiTXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 60";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+      };
+      new GuiControl(MINIWND_CHAR0_PANE) {
+         profile = "MoMWndProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 28";
+         extent = "103 85";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiProgressCtrl(MINIWND_CHAR0_PETHEALTH) {
+            profile = "GuiPetHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 41";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetPet(0);";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR0_HEALTH) {
+            profile = "GuiHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 14";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR0_TARGETHEALTH) {
+            profile = "GuiTargetHealthBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "4 68";
+            extent = "94 14";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(0);";
+         };
+         new GuiBitmapButtonCtrl(MINIWND_CHAR0_PIC) {
+            profile = "InvButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "4 15";
+            extent = "30 30";
+            minExtent = "8 2";
+            visible = "1";
+            command = "MACROWND_CHAR0.performClick();";
+            altCommand = "MACROWND_CHAR0.performClick(); canvas.pushDialog(PartyWnd);";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            rightClickCommand = "Py::OnTargetChar(0);";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            number = "-1";
+            hasStateBitmaps = "0";
+            u0 = "0";
+            u1 = "1";
+            v0 = "0";
+            v1 = "1";
+               wrap = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR0_TARGET) {
+            profile = "MoMSmallStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "23 67";
+            extent = "56 16";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(0);";
+            text = "Target Health";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR0_NAME) {
+            profile = "MoMStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "33 -3";
+            extent = "36 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Mouser";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR0_STAMINA) {
+            profile = "GuiStaminaBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 32";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR0_MANA) {
+            profile = "GuiChiBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 23";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR0_CASTING) {
+            profile = "GuiCastingBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+             position = "38 41";
+            extent = "60 8";
+           minExtent = "8 2";
+            visible = "0";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR0_XP1) {
+            profile = "GuiPXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 50";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR0_XP2) {
+            profile = "GuiSXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 55";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR0_XP3) {
+            profile = "GuiTXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 60";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+      };
+      new GuiControl(MINIWND_CHAR1_PANE) {
+         profile = "MoMWndProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 121";
+         extent = "103 85";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiProgressCtrl(MINIWND_CHAR1_PETHEALTH) {
+            profile = "GuiPetHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 41";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetPet(1);";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR1_HEALTH) {
+            profile = "GuiHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 14";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR1_TARGETHEALTH) {
+            profile = "GuiTargetHealthBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "4 68";
+            extent = "94 14";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(1);";
+         };
+         new GuiBitmapButtonCtrl(MINIWND_CHAR1_PIC) {
+            profile = "InvButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "4 15";
+            extent = "30 30";
+            minExtent = "8 2";
+            visible = "1";
+            command = "MACROWND_CHAR1.performClick();";
+            altCommand = "MACROWND_CHAR1.performClick(); canvas.pushDialog(PartyWnd);";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            rightClickCommand = "Py::OnTargetChar(1);";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            number = "-1";
+            hasStateBitmaps = "0";
+            u0 = "0";
+            u1 = "1";
+            v0 = "0";
+            v1 = "1";
+               wrap = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR1_TARGET) {
+            profile = "MoMSmallStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "23 67";
+            extent = "56 16";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(1);";
+            text = "Target Health";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR1_NAME) {
+            profile = "MoMStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "33 -3";
+            extent = "36 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Mouser";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR1_STAMINA) {
+            profile = "GuiStaminaBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 32";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR1_MANA) {
+            profile = "GuiChiBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 23";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR1_CASTING) {
+            profile = "GuiCastingBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 41";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "0";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR1_XP1) {
+            profile = "GuiPXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 50";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR1_XP2) {
+            profile = "GuiSXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 55";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR1_XP3) {
+            profile = "GuiTXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 60";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+      };
+      new GuiControl(MINIWND_CHAR2_PANE) {
+         profile = "MoMWndProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 213";
+         extent = "103 85";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiProgressCtrl(MINIWND_CHAR2_PETHEALTH) {
+            profile = "GuiPetHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 41";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetPet(2);";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR2_HEALTH) {
+            profile = "GuiHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 14";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR2_TARGETHEALTH) {
+            profile = "GuiTargetHealthBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "4 68";
+            extent = "94 14";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(2);";
+         };
+         new GuiBitmapButtonCtrl(MINIWND_CHAR2_PIC) {
+            profile = "InvButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "4 15";
+            extent = "30 30";
+            minExtent = "8 2";
+            visible = "1";
+            command = "MACROWND_CHAR2.performClick();";
+            altCommand = "MACROWND_CHAR2.performClick(); canvas.pushDialog(PartyWnd);";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            rightClickCommand = "Py::OnTargetChar(2);";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            number = "-1";
+            hasStateBitmaps = "0";
+            u0 = "0";
+            u1 = "1";
+            v0 = "0";
+            v1 = "1";
+               wrap = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR2_TARGET) {
+            profile = "MoMSmallStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "23 67";
+            extent = "56 16";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(2);";
+            text = "Target Health";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR2_NAME) {
+            profile = "MoMStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "33 -3";
+            extent = "36 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Mouser";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR2_STAMINA) {
+            profile = "GuiStaminaBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 32";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR2_MANA) {
+            profile = "GuiChiBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 23";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR2_CASTING) {
+            profile = "GuiCastingBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 41";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "0";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR2_XP1) {
+            profile = "GuiPXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 50";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR2_XP2) {
+            profile = "GuiSXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 55";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR2_XP3) {
+            profile = "GuiTXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 60";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+      };
+      new GuiControl(MINIWND_CHAR3_PANE) {
+         profile = "MoMWndProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 305";
+         extent = "103 85";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiProgressCtrl(MINIWND_CHAR3_PETHEALTH) {
+            profile = "GuiPetHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 41";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetPet(3);";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR3_HEALTH) {
+            profile = "GuiHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 14";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR3_TARGETHEALTH) {
+            profile = "GuiTargetHealthBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "4 68";
+            extent = "94 14";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(3);";
+         };
+         new GuiBitmapButtonCtrl(MINIWND_CHAR3_PIC) {
+            profile = "InvButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "4 15";
+            extent = "30 30";
+            minExtent = "8 2";
+            visible = "1";
+            command = "MACROWND_CHAR3.performClick();";
+            altCommand = "MACROWND_CHAR3.performClick(); canvas.pushDialog(PartyWnd);";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            rightClickCommand = "Py::OnTargetChar(3);";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            number = "-1";
+            hasStateBitmaps = "0";
+            u0 = "0";
+            u1 = "1";
+            v0 = "0";
+            v1 = "1";
+               wrap = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR3_TARGET) {
+            profile = "MoMSmallStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "23 67";
+            extent = "56 16";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(3);";
+            text = "Target Health";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR3_NAME) {
+            profile = "MoMStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "33 -3";
+            extent = "36 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Mouser";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR3_STAMINA) {
+            profile = "GuiStaminaBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 32";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR3_MANA) {
+            profile = "GuiChiBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 23";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR3_CASTING) {
+            profile = "GuiCastingBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 41";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "0";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR3_XP1) {
+            profile = "GuiPXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 50";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR3_XP2) {
+            profile = "GuiSXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 55";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR3_XP3) {
+            profile = "GuiTXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 60";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+      };
+      new GuiControl(MINIWND_CHAR4_PANE) {
+         profile = "MoMWndProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 397";
+         extent = "103 85";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiProgressCtrl(MINIWND_CHAR4_PETHEALTH) {
+            profile = "GuiPetHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 41";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetPet(4);";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR4_HEALTH) {
+            profile = "GuiHealthBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 14";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR4_TARGETHEALTH) {
+            profile = "GuiTargetHealthBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "4 68";
+            extent = "94 14";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(4);";
+         };
+         new GuiBitmapButtonCtrl(MINIWND_CHAR4_PIC) {
+            profile = "InvButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "4 15";
+            extent = "30 30";
+            minExtent = "8 2";
+            visible = "1";
+            command = "MACROWND_CHAR4.performClick();";
+            altCommand = "MACROWND_CHAR4.performClick(); canvas.pushDialog(PartyWnd);";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            rightClickCommand = "Py::OnTargetChar(4);";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            number = "-1";
+            hasStateBitmaps = "0";
+            u0 = "0";
+            u1 = "1";
+            v0 = "0";
+            v1 = "1";
+               wrap = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR4_TARGET) {
+            profile = "MoMSmallStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "23 67";
+            extent = "56 16";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnTargetCharTarget(4);";
+            text = "Target Health";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl(MINIWND_CHAR4_NAME) {
+            profile = "MoMStatText";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "33 -3";
+            extent = "36 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Mouser";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR4_STAMINA) {
+            profile = "GuiStaminaBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 32";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR4_MANA) {
+            profile = "GuiChiBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 23";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(MINIWND_CHAR4_CASTING) {
+            profile = "GuiCastingBarProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "38 41";
+            extent = "60 8";
+            minExtent = "8 2";
+            visible = "0";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR4_XP1) {
+            profile = "GuiPXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 50";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR4_XP2) {
+            profile = "GuiSXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 55";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+         new GuiProgressCtrl(CMDWND_CHAR4_XP3) {
+            profile = "GuiTXPBarProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "7 60";
+            extent = "88 4";
+            minExtent = "8 2";
+            visible = "1";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+PyExec("mud/client/gui/charMiniWnd.py");

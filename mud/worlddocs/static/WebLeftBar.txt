@@ -1,0 +1,22 @@
+%META:TOPICINFO{author="JoshRitter" date="1122326437" format="1.0" version="1.3"}%
+	* <b>Minions of Mirth</b>
+	* [[MoMWorld.PatchInfo][Patch Information]]
+	* [[http://www.prairiegames.com/phpBB2][Forums]]
+---
+	* <b>World Information</b>
+	* [[MoMWorld.WebHome][Home]]
+	* [[MoMWorld.WebSearch][Search]]
+
+	* [[MoMWorld.ClassIndex][Classes]]
+	* [[MoMWorld.ZoneIndex][Zones]]
+	* [[MoMWorld.SpawnIndex][Spawns (NPCs)]]
+	* [[MoMWorld.SpawnIndexByLevel][Spawns by Level]]
+	* [[MoMWorld.FactionIndex][Factions]]
+	* [[MoMWorld.ItemIndex][Items]]
+	* [[MoMWorld.ItemSetIndex][Item Sets]]
+	* [[MoMWorld.QuestIndex][Quests]]
+	* [[MoMWorld.SpellIndex][Spells]]
+	* [[MoMWorld.SkillIndex][Skills]]
+	* [[MoMWorld.RecipeIndex][Recipes]]
+
+	* [[MoMWorld.EnchantingDisenchantingIndex][Enchanting / Disenchanting]]

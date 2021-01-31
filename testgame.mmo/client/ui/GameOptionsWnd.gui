@@ -1,0 +1,105 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(GameOptionsWnd) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(GameOptionsWnd_Window) {
+      profile = "MoMWndAlwaysHLProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "305 159";
+      extent = "151 203";
+      minExtent = "8 2";
+      visible = "1";
+      text = "Game Options";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(GameOptionsWnd);";
+
+      new GuiButtonCtrl() {
+         profile = "InvButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "11 35";
+         extent = "131 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnGameOptionsCamp();";
+         text = "Camp";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "InvButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "11 75";
+         extent = "131 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnGameOptionsQuit();";
+         text = "Quit";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "InvButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "11 115";
+         extent = "131 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.pushDialog(HelpWnd);";
+         text = "Help";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "InvButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "11 155";
+         extent = "131 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.pushDialog(optionsDlg);";
+         text = "More Options";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,543 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(sgLightEditor) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+      state = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "3 84";
+      extent = "170 394";
+      minExtent = "8 2";
+      visible = "1";
+      text = "SG Light Editor";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "0";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+
+      new GuiPopUpMenuCtrl(sgLightDBList) {
+         profile = "GuiPopUpMenuProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "62 29";
+         extent = "94 21";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         maxPopupHeight = "200";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 29";
+         extent = "43 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Light DB:";
+         maxLength = "255";
+      };
+      new GuiCheckBoxCtrl(sgLightEditorLightOn) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 57";
+         extent = "66 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::setLightDB();";
+         text = "Enabled";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl(sgLightEditorStaticLight) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "95 57";
+         extent = "56 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::setLightDB();";
+         text = "Static";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl(sgLightEditorAdvancedLightingModel) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 75";
+         extent = "141 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::setLightDB();";
+         text = "Advanced Lighting Model";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 118";
+         extent = "36 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Radius:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(sgLightEditorRadius) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "63 119";
+         extent = "93 18";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::setLightDB();";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 144";
+         extent = "28 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Color:";
+         maxLength = "255";
+      };
+      new GuiSliderCtrl(sgLightEditorColorRed) {
+         profile = "GuiSliderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "61 144";
+         extent = "97 21";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::setLightDB();";
+         range = "0.000000 1.000000";
+         ticks = "10";
+         value = "0";
+      };
+      new GuiSliderCtrl(sgLightEditorColorGreen) {
+         profile = "GuiSliderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "61 166";
+         extent = "97 21";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::setLightDB();";
+         range = "0.000000 1.000000";
+         ticks = "10";
+         value = "0";
+      };
+      new GuiSliderCtrl(sgLightEditorColorBlue) {
+         profile = "GuiSliderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "61 188";
+         extent = "97 21";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::setLightDB();";
+         range = "0.000000 1.000000";
+         ticks = "10";
+         value = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 214";
+         extent = "43 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Intensity:";
+         maxLength = "255";
+      };
+      new GuiSliderCtrl(sgLightEditorIntensity) {
+         profile = "GuiSliderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "61 214";
+         extent = "97 21";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::setLightDB();";
+         range = "0.000000 1.000000";
+         ticks = "10";
+         value = "0";
+      };
+      new GuiCheckBoxCtrl(sgLightEditorSpotLight) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 236";
+         extent = "62 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::setLightDB();";
+         text = "Spotlight";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 258";
+         extent = "31 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Angle:";
+         maxLength = "255";
+      };
+      new GuiSliderCtrl(sgLightEditorSpotAngle) {
+         profile = "GuiSliderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "61 258";
+         extent = "97 21";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::setLightDB();";
+         range = "1.000000 179.000000";
+         ticks = "10";
+         value = "1";
+      };
+      new GuiCheckBoxCtrl(sgLightEditorEffectsDTSObjects) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 93";
+         extent = "141 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::setLightDB();";
+         text = "Affects DTS Objects";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 289";
+         extent = "76 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::newDB(false);";
+         text = "New";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "85 289";
+         extent = "76 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::saveDB();";
+         text = "Save";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "85 311";
+         extent = "76 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::restoreDB();";
+         text = "Restore";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 311";
+         extent = "76 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::newDB(true);";
+         text = "Clone";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 340";
+         extent = "62 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Filter Radius:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(sgLightEditorFilterRadius) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "85 341";
+         extent = "71 18";
+         minExtent = "8 2";
+         visible = "1";
+         command = "";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         variable = "$SceneLighting::sgFilterRelightByDistanceRadius";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 366";
+         extent = "153 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sgLightEditor::filteredRelight();";
+         text = "Filtered Relight";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function sgLightEditor::setColor()
+{
+}
+
+function sgLightEditor::setLightDB()
+{
+   %color = sgLightEditorColorRed.value @ " " @
+            sgLightEditorColorGreen.value @ " " @
+            sgLightEditorColorBlue.value;
+   
+   echo("Color: " @ %color);
+   
+   $sgLightEditor::currentLightDB.Colour = %color;
+
+   $sgLightEditor::currentLightDB.EffectsDTSObjects = sgLightEditorEffectsDTSObjects.getValue();
+   $sgLightEditor::currentLightDB.SpotAngle = sgLightEditorSpotAngle.value;
+   $sgLightEditor::currentLightDB.SpotLight = sgLightEditorSpotLight.getValue();
+   $sgLightEditor::currentLightDB.Brightness = sgLightEditorIntensity.value;
+   $sgLightEditor::currentLightDB.Radius = sgLightEditorRadius.getValue();
+   $sgLightEditor::currentLightDB.AdvancedLightingModel = sgLightEditorAdvancedLightingModel.getValue();
+   $sgLightEditor::currentLightDB.StaticLight = sgLightEditorStaticLight.getValue();
+   $sgLightEditor::currentLightDB.LightOn = sgLightEditorLightOn.getValue();
+}
+
+function sgLightEditor::setGuiObjects()
+{
+   %r = getWord($sgLightEditor::currentLightDB.Colour, 0);
+   %g = getWord($sgLightEditor::currentLightDB.Colour, 1);
+   %b = getWord($sgLightEditor::currentLightDB.Colour, 2);
+   
+   sgLightEditorColorRed.setValue(%r);
+   sgLightEditorColorGreen.setValue(%g);
+   sgLightEditorColorBlue.setValue(%b);
+
+   sgLightEditorEffectsDTSObjects.setValue($sgLightEditor::currentLightDB.EffectsDTSObjects);
+   sgLightEditorSpotAngle.setValue($sgLightEditor::currentLightDB.SpotAngle);
+   sgLightEditorSpotLight.setValue($sgLightEditor::currentLightDB.SpotLight);
+   sgLightEditorIntensity.setValue($sgLightEditor::currentLightDB.Brightness);
+   sgLightEditorRadius.setText($sgLightEditor::currentLightDB.Radius);
+   sgLightEditorAdvancedLightingModel.setValue($sgLightEditor::currentLightDB.AdvancedLightingModel);
+   sgLightEditorStaticLight.setValue($sgLightEditor::currentLightDB.StaticLight);
+   sgLightEditorLightOn.setValue($sgLightEditor::currentLightDB.LightOn);
+}
+
+function sgLightEditor::findLightDataBlocks()
+{
+   sgLightDBList.clear();
+   %file = findFirstFile($sgLightEditor::lightDBPath @ "*.cs");
+   %i = 0;
+  
+   while(%file !$= "")
+   {
+      %file = fileBase(%file);
+      sgLightDBList.add(%file, %i);
+      %file = findNextFile($sgLightEditor::lightDBPath @ "*.cs");
+      %i++;
+   }
+   
+   sgLightDBList.sort();
+   sgLightDBList.setSelected(0);
+}
+
+function sgLightEditor::onWake()
+{
+   sgLightEditor::findLightDataBlocks();
+   sgLightEditor::setGuiObjects();
+   
+   $SceneLighting::sgFilterRelightVisible = true;
+}
+
+function sgLightEditor::onSleep()
+{
+   sgLightEditor.state = 0;
+
+   $SceneLighting::sgFilterRelightVisible = false;
+}
+
+function sgLightEditor::newDB(%clone)
+{
+   sgLightEditorNewDB.clone = %clone;
+   Canvas.pushDialog(sgLightEditorNewDB);
+}
+
+function sgLightEditor::createDB(%name)
+{
+   %path = $sgLightEditor::lightDBPath @ %name @ ".cs";
+   
+   if(!isFile(%path))
+   {
+      %file = new FileObject();
+      %file.openForWrite(%path);
+      %file.writeLine("//--- OBJECT WRITE BEGIN ---");
+      %file.writeLine("datablock sgUniversalStaticLightData(" @ %name @ ") {");
+      %file.writeLine("className = \"sgUniversalStaticLightData\";");
+      %file.writeLine("};");
+      %file.writeLine("//--- OBJECT WRITE END ---");
+      %file.delete();
+   
+      exec(%path);
+      
+      sgLightEditor::onWake();
+   }
+   
+   sgLightDBList.setSelected(sgLightDBList.findText(%name));
+}
+
+function sgLightEditor::cloneDB(%name)
+{
+   %path = $sgLightEditor::lightDBPath @ %name @ ".cs";
+   $sgLightEditor::currentLightDB.save(%path);
+   
+   //update file to define datablock...
+   %file = new FileObject();
+   %file.openForRead(%path);
+   %line = "";
+   while(!%file.isEOF())
+      %line = %line @ %file.readLine() @ "\n";
+   %file.delete();
+   
+   %line = strreplace(%line, "//--- OBJECT WRITE BEGIN ---\nnew", "//--- OBJECT WRITE BEGIN ---\ndatablock");
+   %line = strreplace(%line, $sgLightEditor::currentLightDBName, %name);
+   
+   %file = new FileObject();
+   %file.openForWrite(%path);
+   %file.writeLine(%line);
+   %file.delete();
+   
+   exec(%path);
+   
+   sgLightEditor::onWake();
+   sgLightDBList.setSelected(sgLightDBList.findText(%name));
+}
+
+function sgLightEditor::saveDB()
+{
+   %path = $sgLightEditor::lightDBPath @ $sgLightEditor::currentLightDBName @ ".cs";
+   $sgLightEditor::currentLightDB.save(%path);
+   
+   //update file to define datablock...
+   %file = new FileObject();
+   %file.openForRead(%path);
+   %line = "";
+   while(!%file.isEOF())
+      %line = %line @ %file.readLine() @ "\n";
+   %file.delete();
+   
+   %line = strreplace(%line, "//--- OBJECT WRITE BEGIN ---\nnew", "//--- OBJECT WRITE BEGIN ---\ndatablock");
+   
+   %file = new FileObject();
+   %file.openForWrite(%path);
+   %file.writeLine(%line);
+   %file.delete();
+}
+
+function sgLightEditor::restoreDB()
+{
+   %path = $sgLightEditor::lightDBPath @ $sgLightEditor::currentLightDBName @ ".cs";
+   exec(%path);
+   sgLightEditor::setGuiObjects();
+}
+
+function sgLightEditor::toggle()
+{
+	echo("sgLightEditor::toggle()");
+   if(sgLightEditor.state == 0)
+   {
+      canvas.pushdialog(sgLightEditor);
+      sgLightEditor.state = 1;
+   }
+   else
+   {
+      canvas.popdialog(sgLightEditor);
+      sgLightEditor.state = 0;
+   }
+}
+
+function clientCmdsgGetLightDBIdCallback(%id)
+{
+   $sgLightEditor::currentLightDB = %id;
+   sgLightEditor::setGuiObjects();
+}
+
+function sgLightDBList::onSelect(%this, %id, %text)
+{
+   $sgLightEditor::currentLightDBName = sgLightDBList.getText();  
+   commandToServer('sgGetLightDBId', $sgLightEditor::currentLightDBName);
+}
+
+function sgLightEditor::filteredRelight()
+{
+   $SceneLighting::sgFilterRelight = "true";
+   $SceneLighting::sgFilterRelightByDistance = "true";
+   //$SceneLighting::sgFilterRelightByDistanceRadius = sgLightEditorFilterRadius.getValue();
+   //if($SceneLighting::sgFilterRelightByDistanceRadius < 1)
+   //{
+   //   echo("Bad filter value - reseting...");
+   //   $SceneLighting::sgFilterRelightByDistanceRadius = 1;
+   //   sgLightEditorFilterRadius.setText($SceneLighting::sgFilterRelightByDistanceRadius);
+   //}
+   //echo($SceneLighting::sgFilterRelightByDistanceRadius);
+   lightScene("filteredRelightComplete", forceAlways);
+}
+
+function filteredRelightComplete()
+{
+   $SceneLighting::sgFilterRelight = "false";
+}

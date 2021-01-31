@@ -1,0 +1,61 @@
+
+
+//--- OBJECT WRITE BEGIN ---
+new rpgTSCtrl(PlayGui) {
+   profile = "RPGContentProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 8";
+   visible = "1";
+   cameraZRot = "0";
+   forceFOV = "0";
+      helpTag = "0";
+
+   new GuiShapeNameHud() {
+      profile = "ShapeNameHudProfile";
+      horizSizing = "width";
+      vertSizing = "height";
+      position = "0 0";
+      extent = "1037 773";
+      minExtent = "8 8";
+      visible = "1";
+      fillColor = "0.000000 0.000000 0.000000 0.250000";
+      frameColor = "0.000000 1.000000 0.000000 1.000000";
+      textColor = "0.140000 0.490000 0.930000 1.000000";
+      showFill = "0";
+      showFrame = "0";
+      verticalOffset = "0.2";
+      distanceFade = "0.1";
+      helpTag = "0";
+      damageRect = "30 4";
+      damageFrameColor = "1.000000 0.600000 0.000000 1.000000";
+      damageFillColor = "0.000000 1.000000 0.000000 1.000000";
+      hostilePlayerBitmap = "~/data/ui/icons/dead";
+      friendlyPlayerBitmap = "~/data/ui/icons/smiley_white";
+   };
+   new GuiBitmapBorderCtrl(MOM_TOOLTIP_BORDER) {
+      profile = "MoMSolidBorderProfile";
+      horizSizing = "center";
+      vertSizing = "relative";
+      position = "389 736";
+      extent = "245 27";
+      minExtent = "8 2";
+      visible = "1";
+
+      new GuiTextCtrl(MOM_TOOLTIP) {
+         profile = "MoMStatText";
+         horizSizing = "center";
+         vertSizing = "relative";
+         position = "91 4";
+         extent = "62 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Testing 1 2 3";
+         maxLength = "255";
+         dropShadow = "1";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

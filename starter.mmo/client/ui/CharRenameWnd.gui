@@ -1,0 +1,108 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(CharRenameWnd) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(CharRenameWnd_Window) {
+      profile = "MoMSolidWndProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "367 279";
+      extent = "290 209";
+      minExtent = "8 2";
+      visible = "1";
+      text = "Rename Character";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "0";
+      canClose = "0";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "50 50";
+
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "23 159";
+         extent = "109 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnRenameCharacter();";
+         text = "Rename";
+         mouseOver = "0";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiMLTextCtrl(CHARRENAMEWND_MESSAGE) {
+         profile = "MoMStatText";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "9 36";
+         extent = "272 14";
+         minExtent = "8 2";
+         visible = "1";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+         text = "Please rename your character...";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "153 159";
+         extent = "109 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(CharRenameWnd);";
+         text = "Cancel";
+         mouseOver = "0";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "42 120";
+         extent = "56 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2New Name:";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextEditCtrl(CHARRENAMEWND_NAME) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "103 121";
+         extent = "149 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         firstRespondOnly = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,63 @@
+%META:TOPICINFO{author="JoshRitter" date="1121794336" format="1.0" version="1.10"}%
+%META:TOPICPARENT{name="WebHome"}%
+---++ <nop>%WEB% Web Preferences
+
+The following settings are __web preferences__ of the [[%WEB%.%HOMETOPIC%][%WEB%]] web. These preferences overwrite the __site-level preferences__ in %TWIKIWEB%.%WIKIPREFSTOPIC%, and can be overwritten by __user preferences__ (your personal topic, eg: %MAINWEB%.TWikiGuest in the [[%MAINWEB%.%HOMETOPIC%][%MAINWEB%]] web).
+
+
+__Preferences:__
+
+	* List of topics of the %WIKITOOLNAME%.%WEB% web:
+		* Set WEBTOPICLIST = [[WebChanges][Changes]] %SEP% [[WebIndex][Index]] %SEP% [[WebSearch][Search]] %SEP% Go <input type="text" name="topic" size="16" />
+
+	* Web specific background color: (Pick a lighter one of the %TWIKIWEB%.StandardColors)
+		* Set WEBBGCOLOR = #D0D0D0
+
+	* List this web in the %TWIKIWEB%.SiteMap:
+		* If yes, set SITEMAPLIST to =on=, do not set NOSEARCHALL, and add the "what" and "use to..." description for the site map. Make sure to list only links that include the name of the web, e.g. <nop>%WEB%.Topic links.
+		* Set SITEMAPLIST = on
+		* Set SITEMAPWHAT = Procedural World Dump
+		* Set SITEMAPUSETO = Show World Information
+
+	* Exclude web from a =web="all"= search: (Set to =on= for hidden webs)
+		* Set NOSEARCHALL = 
+
+	* Prevent automatic linking of [[%TWIKIWEB%.WikiWords][WikiWords]] and acronyms (if set to =on=); link <nop>WikiWords (if empty); can be overwritten by web preferences:
+		* Set NOAUTOLINK = 
+		* __Note:__ Use the =[<nop>[...][...]]= syntax to link topics in case you disabled <nop>WikiWord linking. The =&lt;noautolink&gt; ... &lt;/noautolink&gt;= syntax can be used to prevents links within a block of text.
+
+	* Default template for new topics and form(s) for this web:
+		* WebTopicEditTemplate: Default template for new topics in this web. (Site-level is used if topic does not exist)
+		* [[%TWIKIWEB%.WebTopicEditTemplate]]: Site-level default template
+		* %TWIKIWEB%.TWikiForms: How to enable form(s)
+		* Set WEBFORMS = 
+
+	* Users or groups who __are not__ / __are__ allowed to __view__ / __change__ / __rename__ topics in the <nop>%WEB% web: (See %TWIKIWEB%.TWikiAccessControl)
+		* Set DENYWEBVIEW = 
+		* Set ALLOWWEBVIEW = 
+		* Set DENYWEBCHANGE = 
+		* Set ALLOWWEBCHANGE = 
+		* Set DENYWEBRENAME = 
+		* Set ALLOWWEBRENAME = 
+
+	* Users or groups allowed to change or rename this <nop>%TOPIC% topic: (I.e. %MAINWEB%.TWikiAdminGroup)
+		* Set ALLOWTOPICCHANGE = 
+		* Set ALLOWTOPICRENAME = %MAINWEB%.TWikiAdminGroup
+
+	* Web preferences that are *not* allowed to be overridden by user preferences:
+		* Set FINALPREFERENCES = NOSEARCHALL, ATTACHFILESIZELIMIT, WIKIWEBMASTER, WEBCOPYRIGHT, WEBTOPICLIST, DENYWEBVIEW, ALLOWWEBVIEW, DENYWEBCHANGE, ALLOWWEBCHANGE, DENYWEBRENAME, ALLOWWEBRENAME
+
+__Notes:__
+	* A preference is defined as: <br /> =6 spaces * Set NAME = value= <br /> Example:
+		* S<nop>et WEBBGCOLOR = #FFFFC0
+	* Preferences are used as %TWIKIWEB%.TWikiVariables by enclosing the name in percent signs. Example:
+		* When you write variable =%WEB<nop>BGCOLOR%= , it gets expanded to =%WEBBGCOLOR%= .
+	* The sequential order of the preference settings is significant. Define preferences that use other preferences first, i.e. set =<nop>WEBCOPYRIGHT= before =<nop>WIKIWEBMASTER= since =%<nop>WEBCOPYRIGHT%= uses the =%<nop>WIKIWEBMASTER%= variable.
+	* You can introduce new preferences variables and use them in your topics and templates. There is no need to change the %WIKITOOLNAME% engine (Perl scripts).
+
+__Related Topics:__
+	* %TWIKIWEB%.%WIKIPREFSTOPIC% has site-level preferences.
+	* %MAINWEB%.%WIKIUSERSTOPIC% has a list of user topics. User topics can have optional user preferences.
+	* %TWIKIWEB%.TWikiVariables has a list of common =%<nop>VARIABLES%=.
+	* %TWIKIWEB%.TWikiAccessControl explains how to restrict access by users or groups.
+

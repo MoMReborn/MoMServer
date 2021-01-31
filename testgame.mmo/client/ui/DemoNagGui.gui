@@ -1,0 +1,67 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(DemoNagGui) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "center";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiControl() {
+      profile = "GuiModelessDialogProfile";
+      horizSizing = "center";
+      vertSizing = "bottom";
+      position = "387 -59";
+      extent = "250 250";
+      minExtent = "8 2";
+      visible = "1";
+
+      new GuiBitmapCtrl() {
+         profile = "GuiModelessDialogProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "4 31";
+         extent = "240 240";
+         minExtent = "8 2";
+         visible = "1";
+         bitmap = "~/data/ui/demo/demo_book";
+         wrap = "0";
+         modulation = "1.000000 1.000000 1.000000 1.000000";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "26 93";
+         extent = "92 92";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(DemoNagGui);";
+         bitmap = "~/data/ui/demo/demo_version";
+         wrap = "0";
+         modulation = "1.000000 1.000000 1.000000 1.000000";
+      };
+      new GuiBitmapButtonCtrl(DNG_BUYNOW) {
+         profile = "InvButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "129 97";
+         extent = "92 92";
+         minExtent = "8 2";
+         visible = "1";
+         command = "gotoWebPage(\"http://www.prairiegames.com/ordering.html\");quit();";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/demo/buy_now";
+         number = "-1";
+         hasStateBitmaps = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

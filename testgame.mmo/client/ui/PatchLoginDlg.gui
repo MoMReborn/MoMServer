@@ -1,0 +1,146 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(PatchLoginDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "MoMSolidWndProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "352 284";
+      extent = "320 200";
+      minExtent = "320 200";
+      visible = "1";
+      text = "Master Login";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "320 200";
+      closeCommand = "Canvas.popDialog(PatchLoginDlg);";
+
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "53 42";
+         extent = "61 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2Public Name:";
+         maxLength = "0";
+         dropShadow = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "61 69";
+         extent = "53 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2Password:";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextEditCtrl(PATCHLOGIN_PUBLICNAME) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "120 43";
+         extent = "153 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         firstRespondOnly = "0";
+      };
+      new GuiTextEditCtrl(PATCHLOGIN_PASSWORD) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "120 69";
+         extent = "153 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "1";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         firstRespondOnly = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "51 107";
+         extent = "103 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnPatchLogin();Canvas.popDialog(PatchLoginDlg);";
+         text = "Login";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "171 107";
+         extent = "103 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(PatchLoginDlg);Canvas.pushDialog(LostPasswordDlg);";
+         text = "Lost Password";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "109 153";
+         extent = "103 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(PatchLoginDlg);";
+         text = "Cancel";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+

@@ -1,0 +1,102 @@
+List of files changed with each version to help comparing from previous versions.
+
+Version 1.3 SP1 to Version 1.3 SP2:
+Files modified:
+-packaging\buildistro.py
+-projects\testgame.agp
+-mud\client\gui\advancePane.py
+-mud\simulation\simobject.py
+-mud\world\archetype.py
+-mud\world\character.py
+-mud\world\cserveravatar.py
+-mud\world\defines.py
+-mud\world\effect.py
+-mud\world\item.py
+-mud\world\loot.py
+-mud\world\mob.py
+-mud\world\mobvarients.py
+-mud\world\newplayeravatar.py
+-mud\world\spawn.py
+-mud\world\theworld.py
+-mud\world\worldupdate.py
+-mud\world\zone.py
+-mud\worldserver\embedded.py
+-mmoide\tool\ZoneService.py
+-mmoide\tool\data\splash.jpg
+-starter.mmo\genesis\skill\general.py
+-testgame.mmo\data\missions\base.mis
+-testgame.mmo\data\missions\base.ter
+-testgame.mmo\data\worlds\multiplayer.baseline\world.db
+-testgame.mmo\genesis\item\items.py
+-testgame.mmo\genesis\skill\general.py
+-testgame.mmo\genesis\spawn\animal.py
+-testgame.mmo\genesis\spawn\critters.py
+-testgame.mmo\genesis\spawn\npc.py
+-testgame.mmo\genesis\world\world.py
+-testgame.mmo\genesis\vendor\weaponvendor.py
+-testgame.mmo\genesis\zone\base\spawngroups.py
+-testgame.mmo\genesis\zone\landone\landone.py
+-testgame.mmo\genesis\zone\landtwo\landtwo.py
+
+
+Version 1.3 to Version 1.3 SP1:
+Files modified:
+-mud\gamesettings.py
+-mud\characterserver\restorecharacter.py
+-mud\characterserver\server.py
+-mud\gmserver\gmserver.py
+-mud\masterserver\main.py
+-mud\masterserver\newplayeremail.py
+-mud\server\config.py
+-mud\world\theworld.py
+-mud\worlddaemon\main.py
+-mud\worlddaemon\worldimp.py
+-mud\worlddaemon\worldservices.py
+-mud\worldmanager\worldmanager.py
+-mud\worldserver\main.py
+-packaging\touchmanifests.py
+-packaging\client2exe.py
+
+Removed changes.txt.  All info is in patchlist.txt
+
+Version 1.2 to Version 1.3:
+Files modified:
+-mud\characterserver\gui.py
+-mud\client\gui\helWnd.py
+-mud\client\gui\patcherGui.py
+-mud\client\gui\worldGui.py
+-mud\gmserver\gmserver.py
+-mud\gmserver\userpasswords.py
+-mud\gmtool\gmmind.py
+-mud\gmtool\gmtool.py
+-mud\masterserver\gui.py
+-mud\masterserver\main.py
+-mud\masterserver\newplayeremail.py
+-mud\world\core.py
+-mud\world\crafting.py
+-mud\world\genesistime.py
+-mud\world\guardiancommand.py
+-mud\world\immortalcommand.py
+-mud\world\theworld.py
+-mud\world\zone.py
+-mud\worlddaemon\gmservices.py
+-mud\worlddaemon\gui.py
+-mud\worlddaemon\worldimp.py
+-mud\worlddaemon\worldservices.py
+-mud\worldmanager\worldmanager.py
+-packaging\gmtool2app.py
+-packaging\nsis\license.txt
+-packaging\packagemaker\license.rtf
+-packaging\packagemaker\readme.rtf
+-starter.mmo\client\ui\mom_menu_background.jpg
+-starter.mmo\client\ui\mom_menu_background_demo.jpg
+-starter.mmo\client\ui\mom_menu_background_test.jpg
+-testgame.mmo\client\ui\mom_menu_background.jpg
+-testgame.mmo\client\ui\mom_menu_background_demo.jpg
+-testgame.mmo\client\ui\mom_menu_background_test.jpg
+-projects\testgame.agp
+
+Folders Removed:
+-tools
+-common/editor/heightScripts
+-

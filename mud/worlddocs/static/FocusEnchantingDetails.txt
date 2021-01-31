@@ -1,0 +1,10 @@
+
+---+ Focus Enchanting Details
+
+
+Before a raw focus gained from disenchanting can be used for enchanting special powers on an item it needs to be modified with a separate enchantment. To enchant a raw focus, put it into the crafting window and type '/enchant focus of {focustype}' into the chatbox. <br>Enchantments which affect basic stats (str, bdy, dex, ref, agi, mnd, mys, wis) drain one stat point permanently from the player on successful focus enchantment. This drain is handled like drinking a stat potion with a negative effect, you must have consumed a stat potion before you can use this command. <br>The resultant focus item may then be used to enchant items.
+
+Valid focustypes are: <br>	*Health* : Max Health enchantments <br>	*Ether* : *Mana* : Max Mana enchantments <br>	*Endurance* : *Stamina* : Max Stamina enchantments <br>	*Strength* : Strength enchantments <br>	*Constitution* : *Body* : Body enchantments <br>	*Instinct* : *Reflex* : Reflex enchantments <br>	*Nimbleness* : *Agility* : Agility enchantments <br>	*Quickness* : *Dexterity* : Dexterity enchantments <br>	*Insight* : *Mind* : Mind enchantments <br>	*Clarity* : *Wisdom* : Wisdom enchantments <br>	*the Arcane* : *Mysticism* : Mysticism enchantments
+
+
+*%RED%Warning: %ENDCOLOR%* a focus enchantment can fail. Upon failure the player still has to pay the costs, except for the stat drain. In addition a mana drain will occur which is modified by the enchanting skill level. Higher skill level will lower the mana drain and if high enough can even prevent a failure from happening at all. No foci will be lost upon failure.

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+
+
+chmod -RL ugo+rwx /Applications/MinionsOfMirth
+
+
+

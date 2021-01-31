@@ -1,0 +1,5 @@
+%META:TOPICINFO{author="PeterThoeny" date="1006602047" format="1.0" version="1.1"}%
+%META:TOPICPARENT{name="WebHome"}%
+%TOPICLIST{"	* [[$name]]"}%
+
+See also the verbose WebIndex.

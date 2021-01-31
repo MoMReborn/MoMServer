@@ -1,0 +1,109 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(SPGlobalChatGui) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "center";
+   vertSizing = "center";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(SPGlobalChatGui_Wnd) {
+      profile = "MoMSolidWndProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "193 106";
+      extent = "253 268";
+      minExtent = "253 233";
+      visible = "1";
+      text = "Global Chat Login";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "253 233";
+      closeCommand = "Canvas.popDialog(SPGlobalChatGui);";
+
+      new GuiMLTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 36";
+         extent = "215 112";
+         minExtent = "8 2";
+         visible = "1";
+         lineSpacing = "2";
+         allowColorChars = "1";
+         maxChars = "-1";
+         text = "You can chat with other players, trade tips, and share strategies by logging into Global Chat.\n\nPlease make sure you are connected to the internet before doing so...\n\nOnce you\'ve connected, type:   /m hello!";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "17 168";
+         extent = "49 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2Username";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(SPGCUSERTEXT) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "71 168";
+         extent = "166 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$pref::SPGlobalChatUserName";
+         altCommand = "Py::OnSPGlobalChatLogin();";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "InvButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 215";
+         extent = "105 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnSPGlobalChatLogin();";
+         text = "Login";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "InvButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "133 215";
+         extent = "105 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(SPGlobalChatGui);";
+         text = "Cancel";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

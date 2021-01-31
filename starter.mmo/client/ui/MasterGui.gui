@@ -1,0 +1,446 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(MasterGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "relative";
+   vertSizing = "relative";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+   bitmap = "~/client/ui/mom_menu_background";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiBitmapBorderCtrl() {
+      profile = "MoMSolidBorderProfile";
+      horizSizing = "relative";
+      vertSizing = "relative";
+      position = "96 296";
+      extent = "819 480";
+      minExtent = "512 300";
+      visible = "1";
+
+      new GuiControl(MASTERGUI_PANE) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "center";
+         vertSizing = "center";
+         position = "3 -1";
+         extent = "813 481";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiBitmapBorderCtrl(WORLD_PANEL) {
+            profile = "MoMSolidBorderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "285 0";
+            extent = "490 448";
+            minExtent = "8 2";
+            visible = "1";
+
+            new GuiScrollCtrl(WORLD_DESC_SCROLL) {
+               profile = "MoMScrollProfile";
+               horizSizing = "center";
+               vertSizing = "top";
+               position = "12 239";
+               extent = "465 192";
+               minExtent = "8 2";
+               visible = "1";
+               willFirstRespond = "1";
+               hScrollBar = "alwaysOff";
+               vScrollBar = "dynamic";
+               constantThumbHeight = "0";
+               childMargin = "0 0";
+               childRelPos = "0 0";
+               childPos = "2 2";
+               contentPos = "2 2";
+
+               new GuiMLTextCtrl(WORLD_DESC) {
+                  profile = "MoMStatText";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  position = "2 2";
+                  extent = "431 119";
+                  minExtent = "8 2";
+                  visible = "1";
+                  lineSpacing = "2";
+                  allowColorChars = "1";
+                  maxChars = "-1";
+               };
+            };
+            new GuiChunkedBitmapCtrl(WORLD_BANNER) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "center";
+               vertSizing = "top";
+               position = "20 14";
+               extent = "450 200";
+               minExtent = "8 2";
+               visible = "1";
+               bitmap = "~/data/ui/elements/mmws";
+               useVariable = "0";
+               tile = "0";
+            };
+         };
+         new GuiControl(MASTERGUI_WORLDPANEL) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 72";
+            extent = "282 248";
+            minExtent = "8 2";
+            visible = "1";
+
+            new GuiProgressCtrl(MASTERGUI_SS4) {
+               profile = "GuiPetHealthBarProfile";
+               horizSizing = "left";
+               vertSizing = "top";
+               position = "154 82";
+               extent = "120 19";
+               minExtent = "8 2";
+               visible = "1";
+            };
+            new GuiScrollCtrl(MASTERGUI_WORLDSCROLL) {
+               profile = "MoMScrollProfile";
+               horizSizing = "left";
+               vertSizing = "top";
+               position = "15 14";
+               extent = "141 219";
+               minExtent = "8 2";
+               visible = "1";
+               willFirstRespond = "1";
+               hScrollBar = "alwaysOff";
+               vScrollBar = "dynamic";
+               constantThumbHeight = "0";
+               childMargin = "0 0";
+               childRelPos = "0 0";
+               childPos = "2 2";
+               contentPos = "2 2";
+
+               new GuiTextListCtrl(MasterWorldList) {
+                  profile = "MoMScrollText";
+                  horizSizing = "left";
+                  vertSizing = "top";
+                  position = "2 2";
+                  extent = "137 85";
+                  minExtent = "8 8";
+                  visible = "1";
+                  command = "Py::OnWorldChoose();";
+                  enumerate = "0";
+                  resizeCell = "1";
+                  columns = "0 135 224";
+                  fitParentWidth = "1";
+                  clipColumnText = "0";
+                     noDuplicates = "false";
+                     helpTag = "0";
+               };
+            };
+            new GuiProgressCtrl(MASTERGUI_SS0) {
+               profile = "GuiPetHealthBarProfile";
+               horizSizing = "left";
+               vertSizing = "top";
+               position = "154 14";
+               extent = "120 19";
+               minExtent = "8 2";
+               visible = "1";
+            };
+            new GuiProgressCtrl(MASTERGUI_SS3) {
+               profile = "GuiPetHealthBarProfile";
+               horizSizing = "left";
+               vertSizing = "top";
+               position = "154 65";
+               extent = "120 19";
+               minExtent = "8 2";
+               visible = "1";
+            };
+            new GuiProgressCtrl(MASTERGUI_SS2) {
+               profile = "GuiPetHealthBarProfile";
+               horizSizing = "left";
+               vertSizing = "top";
+               position = "154 48";
+               extent = "120 19";
+               minExtent = "8 2";
+               visible = "1";
+            };
+            new GuiProgressCtrl(MASTERGUI_SS1) {
+               profile = "GuiPetHealthBarProfile";
+               horizSizing = "left";
+               vertSizing = "top";
+               position = "154 31";
+               extent = "120 19";
+               minExtent = "8 2";
+               visible = "1";
+            };
+            new GuiProgressCtrl(MASTERGUI_SS5) {
+               profile = "GuiPetHealthBarProfile";
+               horizSizing = "left";
+               vertSizing = "top";
+               position = "154 100";
+               extent = "120 19";
+               minExtent = "8 2";
+               visible = "0";
+            };
+            new GuiProgressCtrl(MASTERGUI_SS6) {
+               profile = "GuiPetHealthBarProfile";
+               horizSizing = "left";
+               vertSizing = "top";
+               position = "154 117";
+               extent = "120 19";
+               minExtent = "8 2";
+               visible = "0";
+            };
+            new GuiProgressCtrl(MASTERGUI_SS7) {
+               profile = "GuiPetHealthBarProfile";
+               horizSizing = "left";
+               vertSizing = "top";
+               position = "154 134";
+               extent = "120 19";
+               minExtent = "8 2";
+               visible = "0";
+            };
+            new GuiProgressCtrl(MASTERGUI_SS9) {
+               profile = "GuiPetHealthBarProfile";
+               horizSizing = "left";
+               vertSizing = "top";
+               position = "154 168";
+               extent = "120 19";
+               minExtent = "8 2";
+               visible = "1";
+            };
+            new GuiProgressCtrl(MASTERGUI_SS8) {
+               profile = "GuiPetHealthBarProfile";
+               horizSizing = "left";
+               vertSizing = "top";
+               position = "154 151";
+               extent = "120 19";
+               minExtent = "8 2";
+               visible = "0";
+            };
+         };
+         new GuiButtonCtrl(SERVER_PLAYER_BUTTON) {
+            profile = "MenuButtonProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "151 32";
+            extent = "120 32";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnPlayerServers();";
+            text = "Player Servers";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "1";
+            buttonType = "RadioButton";
+         };
+         new GuiButtonCtrl(SERVER_PGSERVERS_BUTTON) {
+            profile = "MenuButtonProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "23 32";
+            extent = "120 32";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnPGServers();";
+            text = "MMORPG Servers";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "1";
+            buttonType = "RadioButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "MenuButtonProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "22 320";
+            extent = "120 32";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnMasterSelectWorld();";
+            text = "Select World";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "MenuButtonProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "150 320";
+            extent = "120 32";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnMasterRequestWorldPassword();";
+            text = "Request Password";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "MenuButtonProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "150 368";
+            extent = "120 32";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Canvas.pushDialog(DirectConnectWnd);DIRECTIP_IP.makeFirstResponder(true);";
+            text = "Direct IP";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl(RefreshWorldsButton) {
+            profile = "MenuButtonProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "22 368";
+            extent = "120 32";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnRefreshWorlds();";
+            text = "Refresh Worlds";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "MenuButtonProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "86 416";
+            extent = "120 32";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::OnMasterGuiLogout();";
+            text = "Logout";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "MoMStatText";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "106 6";
+            extent = "80 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "\c2Server Selection";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl(MASTER_GUI_STATUSTEXT) {
+            profile = "MoMStatText";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "159 67";
+            extent = "31 18";
+            minExtent = "8 2";
+            visible = "0";
+            text = "Status";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiRadioCtrl(MASTER_LOGIN_PLAYER) {
+            profile = "MoMRadioProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "420 208";
+            extent = "46 32";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Player";
+            mouseOver = "0";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "2";
+            buttonType = "RadioButton";
+         };
+         new GuiRadioCtrl(MASTER_LOGIN_GUARDIAN) {
+            profile = "MoMRadioProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "491 208";
+            extent = "60 32";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Guardian";
+            mouseOver = "0";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "2";
+            buttonType = "RadioButton";
+         };
+         new GuiRadioCtrl(MASTER_LOGIN_IMMORTAL) {
+            profile = "MoMRadioProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "576 208";
+            extent = "53 32";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Immortal";
+            mouseOver = "0";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "2";
+            buttonType = "RadioButton";
+         };
+         new GuiTextCtrl(MASTERGUI_WORLDNAME) {
+            profile = "MoMStatText";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "18 67";
+            extent = "58 18";
+            minExtent = "8 2";
+            visible = "0";
+            text = "World Name";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl(MASTER_GUI_PASSWORDTEXT) {
+            profile = "MoMStatText";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "222 67";
+            extent = "50 18";
+            minExtent = "8 2";
+            visible = "0";
+            text = "Password";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+PyExec("mud/client/gui/masterGui.py");

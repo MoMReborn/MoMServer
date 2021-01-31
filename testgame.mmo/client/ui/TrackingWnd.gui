@@ -1,0 +1,130 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(TrackingWnd) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(TRACKINGWND_WINDOW) {
+      profile = "MoMWndProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "492 107";
+      extent = "364 316";
+      minExtent = "364 300";
+      visible = "1";
+      text = "Tracking";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "364 300";
+      closeCommand = "canvas.popDialog(TrackingWnd);";
+
+      new GuiControl(TRACKING_SUBWINDOW) {
+         profile = "MoMSolidWndProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "9 31";
+         extent = "228 269";
+         minExtent = "228 16";
+         visible = "1";
+
+         new GuiScrollCtrl(TRACKING_SCROLL) {
+            profile = "MoMScrollProfile";
+            horizSizing = "width";
+            vertSizing = "height";
+            position = "0 0";
+            extent = "228 269";
+            minExtent = "228 16";
+            visible = "1";
+            willFirstRespond = "0";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "dynamic";
+            constantThumbHeight = "0";
+            childMargin = "2 0";
+            childRelPos = "0 0";
+            childPos = "4 2";
+            contentPos = "4 2";
+
+            new GuiTextListCtrl(TRACKING_TRACKINGLIST) {
+               profile = "MoMTrackingTextProfile";
+               horizSizing = "width";
+               vertSizing = "height";
+               position = "4 2";
+               extent = "202 448";
+               minExtent = "202 16";
+               visible = "1";
+               altCommand = "Py::OnAltClickTrackingList();";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0 162";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+               topCell = "-1";
+            };
+         };
+      };
+      new GuiButtonCtrl(TRACKING_TRACKBUTTON) {
+         profile = "InvButtonProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "248 57";
+         extent = "104 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnTrack();";
+         text = "TRACK";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiBitmapButtonCtrl(TRACKING_TRACKBITMAP) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "239 160";
+         extent = "120 120";
+         minExtent = "8 2";
+         visible = "1";
+         wrap = "0";
+         modulation = "1.000000 1.000000 1.000000 1.000000";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         hasStateBitmaps = "0";
+         buttonType = "ToggleButton";
+         command = "Py::OnToggleTrackingScale();";
+      };
+      new GuiMLTextCtrl(TRACKING_TEXT) {
+         profile = "MoMMediumText";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "242 95";
+         extent = "114 16";
+         minExtent = "8 2";
+         visible = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+PyExec("mud/client/gui/trackingWnd.py");

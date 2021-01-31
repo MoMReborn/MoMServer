@@ -1,0 +1,196 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(FriendsWnd) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(FriendsWnd_Window) {
+      profile = "MoMWndProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "316 77";
+      extent = "410 314";
+      minExtent = "8 2";
+      visible = "1";
+      text = "Friends";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(FriendsWnd);";
+
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "314 44";
+         extent = "80 25";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnAddFriend();";
+         text = "Add";
+         mouseOver = "0";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextEditCtrl(FRIENDSWND_ADDEDIT) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "163 47";
+         extent = "143 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         firstRespondOnly = "0";
+      };
+      new GuiScrollCtrl(FRIENDSWND_SCROLL) {
+         profile = "MoMScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "6 93";
+         extent = "398 167";
+         minExtent = "8 2";
+         visible = "1";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+         childRelPos = "0 0";
+         childPos = "2 2";
+         contentPos = "2 2";
+
+         new GuiTextListCtrl(FRIENDSWND_LIST) {
+            profile = "MoMTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "376 70";
+            minExtent = "8 2";
+            visible = "1";
+            altCommand = "Py::OnClickFriend();";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0 104 260";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "12 79";
+         extent = "27 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Name";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "115 79";
+         extent = "33 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Server";
+         maxLength = "0";
+         dropShadow = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "273 79";
+         extent = "25 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Zone";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 270";
+         extent = "103 31";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnRemoveFriend();";
+         text = "Remove Selected";
+         mouseOver = "0";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "MoMCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "282 270";
+         extent = "112 30";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$pref::game::friendsAudioAlerts";
+         text = "Friend Audio Alerts";
+         mouseOver = "0";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "15 36";
+         extent = "40 40";
+         minExtent = "8 2";
+         visible = "1";
+         bitmap = "~/data/ui/elements/smiley";
+         wrap = "0";
+         modulation = "1.000000 1.000000 1.000000 1.000000";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMBigStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "62 45";
+         extent = "78 22";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2My Friends";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+PyExec("mud/client/gui/friendsWnd.py");

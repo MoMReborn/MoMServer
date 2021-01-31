@@ -1,0 +1,108 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(DirectConnectWnd) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "center";
+   vertSizing = "center";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "MoMSolidWndProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "380 306";
+      extent = "263 156";
+      minExtent = "8 2";
+      visible = "1";
+      text = "Direct IP Connection";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(DirectConnectWnd);";
+
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "44 40";
+         extent = "53 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2IP Address";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextEditCtrl(DIRECTIP_IP) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 65";
+         extent = "162 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$pref::DirectConnectIP";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "74 100";
+         extent = "112 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnDirectSelectWorld();";
+         text = "Connect";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "209 40";
+         extent = "19 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2Port";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextEditCtrl(DIRECTIP_PORT) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "189 65";
+         extent = "59 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$pref::DirectConnectPort";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

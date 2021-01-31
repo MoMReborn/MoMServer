@@ -1,0 +1,13 @@
+
+---+ Spell Enchanting Details
+
+
+All harmful spells in your spellbook may be used to enchant weapons, with the exception of spells that stun, sleep, fear or charm. The spell enchantment is treated like a poison application, with a limited amount of uses per enchantment and instant damage upon successful transfer to a mob.
+
+Only crafted weapons, including bows (but no arrows) can be enchanted with a spell. To do so, put the weapon along with any kind of enchanting focus into the crafting window (even raw foci work for this, the focus won't be consumed) and then type '/enchant {spell name}' into your chatbox.
+
+There is a limit of 2 such spell procs which can be active on a given weapon simultaneously. The spell used for the enchantment has to be known by the enchanter at least at level 3 (use tomes to increase it) and a weapon can only hold spells up to a specific level (not tome level this time), depending on the items level.
+
+The chance for the spell proc to actually trigger in battle as well as the number of applications are both dependent on the player's Enchanting skill level, along with a little 'luck' modifier.
+
+*%RED%Warning: %ENDCOLOR%* there is always a chance for failure when enchanting a weapon with a spell. Failure will trigger an explosion which hurts the player as well as the weapon. Higher Enchanting skill levels will lower the chance for failure, but failure will always remain a possibility. Spell components, mana and stamina costs have to be paid even if the enchantment fails.

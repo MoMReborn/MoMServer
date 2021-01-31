@@ -1,0 +1,81 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(PatchInfoWnd) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "MoMSolidWndProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "351 191";
+      extent = "322 385";
+      minExtent = "8 2";
+      visible = "1";
+      text = "Patch Info";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "50 50";
+
+      new GuiScrollCtrl() {
+         profile = "MoMScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 40";
+         extent = "305 288";
+         minExtent = "8 2";
+         visible = "1";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+         childRelPos = "0 0";
+         childPos = "2 2";
+         contentPos = "2 2";
+
+         new GuiMLTextCtrl(patchinfownd_text) {
+            profile = "MoMStatText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "283 14";
+            minExtent = "8 2";
+            visible = "1";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "91 342";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.popDialog(PatchInfoWnd);";
+         text = "Ok";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

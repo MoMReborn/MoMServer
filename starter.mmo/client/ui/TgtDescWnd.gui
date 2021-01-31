@@ -1,0 +1,390 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(TgtDescWnd) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "MoMWndAlwaysHLProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "95 15";
+      extent = "450 450";
+      minExtent = "320 320";
+      visible = "1";
+      text = "Target Information";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      MinSize = "50 50";
+      closeCommand = "Canvas.popDialog(TgtDescWnd);";
+
+      new GuiControl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "12 32";
+         extent = "426 190";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiBitmapCtrl(TGTDESCWND_BITMAP) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "110 110";
+            minExtent = "8 8";
+            visible = "1";
+            wrap = "0";
+            modulation = "1.000000 1.000000 1.000000 1.000000";
+         };
+         new GuiTextCtrl() {
+            profile = "MoMStatText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "130 6";
+            extent = "30 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Name:";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiMLTextCtrl(TGTDESCWND_NAME) {
+            profile = "MoMStatText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "170 8";
+            extent = "240 18";
+            minExtent = "8 2";
+            visible = "1";
+            lineSpacing = "2";
+            allowColorChars = "1";
+            maxChars = "128";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "MoMStatText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "130 30";
+            extent = "42 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Classes:";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiMLTextCtrl(TGTDESCWND_CLASSES) {
+            profile = "MoMStatText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "182 32";
+            extent = "228 18";
+            minExtent = "8 2";
+            visible = "1";
+            lineSpacing = "2";
+            allowColorChars = "1";
+            maxChars = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "MoMStatText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "130 54";
+            extent = "28 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Race:";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl(TGTDESCWND_RACE) {
+            profile = "MoMStatText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "168 54";
+            extent = "242 18";
+            minExtent = "8 2";
+            visible = "1";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "MoMStatText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "130 78";
+            extent = "32 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Realm:";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiTextCtrl(TGTDESCWND_REALM) {
+            profile = "MoMStatText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "172 78";
+            extent = "238 18";
+            minExtent = "8 2";
+            visible = "1";
+            maxLength = "255";
+            dropShadow = "0";
+         };
+         new GuiControl(TGTDESCWND_PCINFO) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 100";
+            extent = "426 90";
+            minExtent = "8 2";
+            visible = "1";
+
+            new GuiTextCtrl() {
+               profile = "MoMStatText";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "130 2";
+               extent = "27 18";
+               minExtent = "8 2";
+               visible = "1";
+               text = "Guild:";
+               maxLength = "255";
+               dropShadow = "0";
+            };
+            new GuiTextCtrl(TGTDESCWND_GUILDNAME) {
+               profile = "MoMStatText";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "167 2";
+               extent = "243 18";
+               minExtent = "8 2";
+               visible = "1";
+               maxLength = "255";
+               dropShadow = "0";
+            };
+            new GuiTextCtrl() {
+               profile = "MoMStatText";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "130 26";
+               extent = "50 18";
+               minExtent = "8 2";
+               visible = "1";
+               text = "Birth Date:";
+               maxLength = "255";
+               dropShadow = "0";
+            };
+            new GuiTextCtrl(TGTDESCWND_BIRTHDATE) {
+               profile = "MoMStatText";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "190 26";
+               extent = "220 18";
+               minExtent = "8 2";
+               visible = "1";
+               maxLength = "255";
+               dropShadow = "0";
+            };
+            new GuiTextCtrl() {
+               profile = "MoMStatText";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "130 50";
+               extent = "88 18";
+               minExtent = "8 2";
+               visible = "1";
+               text = "Encounter Setting:";
+               maxLength = "255";
+               dropShadow = "0";
+            };
+            new GuiMLTextCtrl(TGTDESCWND_PCENCOUNTERSETTING) {
+               profile = "MoMStatText";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "228 52";
+               extent = "182 18";
+               minExtent = "8 2";
+               visible = "1";
+               lineSpacing = "2";
+               allowColorChars = "1";
+               maxChars = "128";
+               dropShadow = "0";
+            };
+         };
+         new GuiControl(TGTDESCWND_NPCINFO) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 100";
+            extent = "426 90";
+            minExtent = "8 2";
+            visible = "0";
+
+            new GuiTextCtrl(TGTDESCWND_NPCPET) {
+               profile = "MoMStatText";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "130 2";
+               extent = "280 18";
+               minExtent = "8 2";
+               visible = "1";
+               text = "This is someones pet";
+               maxLength = "255";
+               dropShadow = "0";
+            };
+         };
+      };
+      new GuiControl(TGTDESCWND_MYDESCSTUFF) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "15 225";
+         extent = "420 210";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiScrollCtrl() {
+            profile = "MoMScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "420 166";
+            minExtent = "8 2";
+            visible = "1";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "dynamic";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+            childRelPos = "0 0";
+            childPos = "10 10";
+            contentPos = "10 10";
+
+            new GuiMLTextEditCtrl(TGTDESCWND_MYDESC) {
+               profile = "MoMTextEditProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "10 10";
+               extent = "400 156";
+               minExtent = "8 2";
+               visible = "1";
+               lineSpacing = "2";
+               allowColorChars = "1";
+               maxChars = "512";
+               canKeyFocus = "1";
+               mouseOverSelected = "1";
+               renderML = "1";
+               editCommand = "TGTDESCWND_SETMYDESC.setActive(1);";
+            };
+         };
+         new GuiButtonCtrl(TGTDESCWND_SETMYDESC) {
+            profile = "MenuButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "320 176";
+            extent = "90 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Py::TgtDescWndOnSetMyDesc();";
+            text = "Set Description";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "MenuButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 176";
+            extent = "120 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "toggleDescEditRenderML();";
+            text = "Toggle formatting";
+            mouseOver = "0";
+            hotKey = "-1";
+            toggleLocked = "0";
+            pulseRed = "0";
+            pulseGreen = "0";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+      };
+      new GuiScrollCtrl(TGTDESCWND_DESCSCROLL) {
+         profile = "MoMScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "15 225";
+         extent = "420 210";
+         minExtent = "8 2";
+         visible = "0";
+         willFirstRespond = "0";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+         childRelPos = "0 0";
+         childPos = "10 10";
+         contentPos = "10 10";
+
+         new GuiMLTextCtrl(TGTDESCWND_DESCTEXT) {
+            profile = "MoMMediumText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "10 10";
+            extent = "400 190";
+            minExtent = "8 2";
+            visible = "1";
+            lineSpacing = "2";
+            allowColorChars = "1";
+            maxChars = "-1";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function TGTDESCWND_NAME::onURL(%this,%url)
+{
+   Py::ExternEncyclopediaLinkURL(%url);
+}
+function TGTDESCWND_CLASSES::onURL(%this,%url)
+{
+   Py::ExternEncyclopediaLinkURL(%url);
+}
+function TGTDESCWND_MYDESC::onURL(%this,%url)
+{
+   Py::ExternEncyclopediaLinkURL(%url);
+}
+
+function TGTDESCWND_DESCTEXT::onURL(%this,%url)
+{
+   Py::ExternEncyclopediaLinkURL(%url);
+}
+
+function toggleDescEditRenderML()
+{
+   TGTDESCWND_MYDESC.renderML = !TGTDESCWND_MYDESC.renderML;
+   TGTDESCWND_MYDESC.forceReflow();
+}
+
+PyExec("mud/client/gui/tgtDescWnd.py");

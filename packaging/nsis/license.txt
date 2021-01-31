@@ -1,0 +1,31 @@
+<yourgamenamehere> - Licensing Agreement
+
+
+This Software Licensing Agreement ("Agreement") is a legal agreement between you and <yourcompanynamehere>. By installing this Software, by loading or running the Software, by placing or copying the Software onto your hard drive, or by distributing the Software, you agree to be bound by the terms of this Agreement. These are the only terms by which <yourcompanynamehere> permits copying or use.
+
+<yourcompanynamehere>' LICENSE AGREEMENT FOR the <yourgamenamehere> computer program.
+
+
+General terms:
+
+1. THE SOFTWARE.
+The Software licensed under this Agreement is the computer program <yourgamenamehere>, which consists of executable files, data files, and documentation.
+
+2. GRANT OF LICENSE.
+Subject to the terms and conditions contained in this Agreement, <yourcompanynamehere> hereby grants a non-exclusive license and right to install and use one (1) copy of the Software for your use on either a home, business, or portable computer for the purpose of testing <yourgamenamehere>. In addition, the Software has a multi-player capability that allows users to utilize the Software over the Internet. Use of the Software over the Internet is subject to your acceptance of the Agreement. <yourcompanynamehere> reserves the right to update, modify, or change the Agreement at any time. The Program is licensed, not sold. Your license confers no title or ownership in the Program. You may not modify, translate, disassemble, reverse engineer, decompile, or create derivative works based upon the Software. You also may not in any way redistribute the software.
+
+3. COPYRIGHT.
+All title, ownership, and intellectual property rights in and to the Software and any and all copies thereof (including, but not limited to, any titles, computer code, themes, objects, characters, character names, stories, dialog, catch phrases, locations, concepts, artwork, animations, sounds, musical compositions, audio-visual effects, methods of operation, moral rights, any related documentation, and "applets" incorporated into the Software) are owned by <yourcompanynamehere> or it's licensors. The Software is protected by the copyright laws of the United States, international copyright treaties and conventions, and other laws. All rights are reserved. The Software contains certain licensed materials, and <yourcompanynamehere>' licensors may protect their rights in the event of any violation of this Agreement. 
+
+4. NO WARRANTY.
+THE SOFTWARE IS PROVIDED "AS-IS". NO WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, ARE MADE AS TO IT OR ANY MEDIUM IT MAY BE ON. <yourcompanynamehere> WILL PROVIDE NO REMEDY FOR INDIRECT, CONSEQUENTIAL, PUNITIVE OR INCIDENTAL DAMAGES ARISING FROM IT, INCLUDING SUCH FROM NEGLIGENCE, STRICT LIABILITY, OR BREACH OF WARRANTY OR CONTRACT, EVEN AFTER NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
+
+5. TERM.
+The term of this license grant is perpetual. You may terminate this Agreement at any time by destroying the copy of the Software in your possession. Your license to use the Software will automatically terminate if you breach the terms of this Agreement.
+
+6. GENERAL PROVISIONS.
+This Agreement is the sole and entire Agreement relating to the subject matter hereof, and supercedes all prior understandings, agreements, and documentation relating to such subject matter. If any provision in this Agreement is held by a court of competent jurisdiction to be invalid, void, or unenforceable, the remaining provisions will continue in full force without being impaired or invalidated in any way. This Agreement will be governed by the laws of the State of California. With respect to every matter arising under this Agreement, you consent to the exclusive jurisdiction and venue of the state and federal courts sitting in Los Angeles, California, and to service by certified mail, return receipt requested, or as otherwise permitted by law. This Agreement does not create any agency or partner relationship. Your rights under this Agreement are personal and do not include any right to sublicense the Software. This Agreement may be terminated by <yourcompanynamehere> by giving a 30-day advance written notice.
+
+
+Thank you for using this Software in accordance with the terms of this Agreement
+

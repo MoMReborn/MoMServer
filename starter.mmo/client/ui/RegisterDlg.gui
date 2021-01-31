@@ -1,0 +1,197 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(RegisterDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "MoMSolidWndProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "352 279";
+      extent = "320 210";
+      minExtent = "320 200";
+      visible = "1";
+      text = "Registration";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "320 200";
+      closeCommand = "Canvas.popDialog(RegisterDlg);";
+
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "18 35";
+         extent = "82 18";
+         minExtent = "8 2";
+         visible = "0";
+         text = "Registration Key:";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "40 38";
+         extent = "61 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2Public Name:";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextEditCtrl(REGISTERDLG_REGKEY) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "103 35";
+         extent = "198 18";
+         minExtent = "8 2";
+         visible = "0";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         firstRespondOnly = "0";
+      };
+      new GuiTextEditCtrl(REGISTERDLG_PUBLICNAME) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "103 38";
+         extent = "198 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         firstRespondOnly = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "15 159";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnRegister();";
+         text = "Register";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "162 159";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(RegisterDlg);";
+         text = "Cancel";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "29 92";
+         extent = "72 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2Email Address:";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextEditCtrl(REGISTERDLG_EMAILADDRESS) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "103 92";
+         extent = "198 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         firstRespondOnly = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "41 116";
+         extent = "60 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2Verify Email:";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextEditCtrl(REGISTERDLG_VERIFYEMAILADDRESS) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "103 116";
+         extent = "198 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         firstRespondOnly = "0";
+      };
+      new GuiMLTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "19 65";
+         extent = "296 14";
+         minExtent = "8 2";
+         visible = "1";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+         text = "<just:center>Please use an inoffensive  name.";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+PyExec("mud/client/gui/registerDlg.py");

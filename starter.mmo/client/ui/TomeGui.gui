@@ -1,0 +1,798 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(TomeGui) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(TomeGui_Window) {
+      profile = "MoMWndProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "114 93";
+      extent = "359 57";
+      minExtent = "334 57";
+      visible = "1";
+      toolTip = "You can resize the Tome by dragging the lower right corner.  You can also change the size of the text in options.";
+      text = "Tome";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "353 375";
+      closeCommand = "canvas.popDialog(TomeGui);";
+
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "305 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleHelpWnd();";
+         toolTip = "HELP!";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.41";
+         u1 = "0.2";
+         v0 = "0.21";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "236 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleLeaderWnd();";
+         toolTip = "Leader Window";
+         text = "L";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.61";
+         u1 = "0.2";
+         v0 = "0.41";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "6 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "TogglePartyWnd();";
+         toolTip = "Character Window";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0";
+         u1 = "0.2";
+         v0 = "0";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "121 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleTrackingWnd();";
+         toolTip = "Tracking";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.21";
+         u1 = "0.2";
+         v0 = "0.61";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "75 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleMacroWnd();";
+         toolTip = "Macros";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.61";
+         u1 = "0.21";
+         v0 = "0";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "259 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleDefaultCommandsWnd();";
+         toolTip = "Default Commands";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.01";
+         u1 = "0.2";
+         v0 = "0.61";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "29 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleCharMiniWnd();";
+         toolTip = "Party Window";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.21";
+         u1 = "0.2";
+         v0 = "0.21";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "167 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleJournalWnd();";
+         toolTip = "Journal";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0";
+         u1 = "0.2";
+         v0 = "0.21";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "190 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleEncyclopediaWnd();";
+         toolTip = "Encyclopedia";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.61";
+         u1 = "0.2";
+         v0 = "0.21";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "144 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleItemInfoWnd();";
+         toolTip = "Item Information";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0";
+         u1 = "0.21";
+         v0 = "0.41";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "213 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleAllianceWnd();";
+         toolTip = "Alliance Window";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.61";
+         u1 = "0.2";
+         v0 = "0.41";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "52 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleBuffWnd();";
+         toolTip = "Buff Window";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.41";
+         u1 = "0.2";
+         v0 = "0.41";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "282 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleGameOptionsWnd();";
+         toolTip = "Game Options";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.41";
+         u1 = "0.2";
+         v0 = "0";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "98 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleMapWnd();";
+         toolTip = "Map";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.21";
+         u1 = "0.21";
+         v0 = "0.41";
+         v1 = "0.2";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "330 29";
+         extent = "22 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ToggleFriendsWnd();";
+         toolTip = "Friends";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "~/data/ui/elements/tomebuttons";
+         number = "-1";
+         hasStateBitmaps = "0";
+         u0 = "0.02";
+         u1 = "0.2";
+         v0 = "0.82";
+         v1 = "0.2";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function ToggleMacroWnd()
+{
+  if (MacroWnd.isAwake())
+     canvas.popDialog(MacroWnd);
+  else
+     canvas.pushDialog(MacroWnd);
+
+
+  Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleTomeGui()
+{
+  if (TomeGui.isAwake())
+     canvas.popDialog(TomeGui);
+  else
+     canvas.pushDialog(TomeGui);
+
+}
+
+function ToggleDefaultCommandsWnd()
+{
+  if (DefaultCommandsWnd.isAwake())
+     canvas.popDialog(DefaultCommandsWnd);
+  else
+     canvas.pushDialog(DefaultCommandsWnd);
+
+  Tome_CommandText.makeFirstResponder(true);
+}
+
+function ToggleCharMiniWnd()
+{
+  if (CharMiniWnd.isAwake())
+     canvas.popDialog(CharMiniWnd);
+  else
+     canvas.pushDialog(CharMiniWnd);
+     
+  Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleCommandWnd1()
+{
+  if (CommandWnd1.isAwake())
+     canvas.popDialog(CommandWnd1);
+  else
+     canvas.pushDialog(CommandWnd1);
+     
+  Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleCommandWnd2()
+{
+  if (CommandWnd2.visible)
+  {
+      if (CommandWnd2.isAwake())
+         canvas.popDialog(CommandWnd2);
+      else
+         canvas.pushDialog(CommandWnd2);
+  }
+  
+ Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleCommandWnd3()
+{
+  if (CommandWnd3.visible)
+  {
+      if (CommandWnd3.isAwake())
+         canvas.popDialog(CommandWnd3);
+      else
+         canvas.pushDialog(CommandWnd3);
+  }
+
+ Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleCommandWnd4()
+{
+  if (CommandWnd4.visible)
+  {
+      if (CommandWnd4.isAwake())
+         canvas.popDialog(CommandWnd4);
+      else
+         canvas.pushDialog(CommandWnd4);
+  }
+
+ Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleCommandWnd5()
+{
+  if (CommandWnd5.visible)
+  {
+      if (CommandWnd5.isAwake())
+         canvas.popDialog(CommandWnd5);
+      else
+         canvas.pushDialog(CommandWnd5);
+  }
+
+ Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleCommandWnd6()
+{
+  if (CommandWnd6.visible)
+  {
+      if (CommandWnd6.isAwake())
+         canvas.popDialog(CommandWnd6);
+      else
+         canvas.pushDialog(CommandWnd6);
+  }
+
+ Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleItemInfoWnd()
+{
+  if (ItemInfoWnd.isAwake())
+     canvas.popDialog(ItemInfoWnd);
+  else
+     canvas.pushDialog(ItemInfoWnd);
+     
+    Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function TogglePartyWnd()
+{
+  if (PartyWnd.isAwake())
+     canvas.popDialog(PartyWnd);
+  else
+     canvas.pushDialog(PartyWnd);
+     
+    Tome_CommandText.makeFirstResponder(true);
+  
+}
+
+function ToggleTrackingWnd()
+{
+  if (TrackingWnd.isAwake())
+     canvas.popDialog(TrackingWnd);
+  else
+     canvas.pushDialog(TrackingWnd);
+     
+    Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleLeaderWnd()
+{
+  if (LeaderWnd.isAwake())
+     canvas.popDialog(LeaderWnd);
+  else
+     canvas.pushDialog(LeaderWnd);
+     
+    Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleAllianceWnd()
+{
+  if (AllianceWnd.isAwake())
+     canvas.popDialog(AllianceWnd);
+  else
+     canvas.pushDialog(AllianceWnd);
+     
+    Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleMapWnd()
+{
+  if (MapWnd.isAwake())
+     canvas.popDialog(MapWnd);
+  else
+     canvas.pushDialog(MapWnd);
+
+    Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function TogglePetWnd()
+{
+  if (PetWnd.isAwake())
+     canvas.popDialog(PetWnd);
+  else
+     canvas.pushDialog(PetWnd);
+
+    Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleBuffWnd()
+{
+  if (BuffWnd.isAwake())
+     canvas.popDialog(BuffWnd);
+  else
+     canvas.pushDialog(BuffWnd);
+
+    Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleGameOptionsWnd()
+{
+  if (GameOptionsWnd.isAwake())
+     canvas.popDialog(GameOptionsWnd);
+  else
+     canvas.pushDialog(GameOptionsWnd);
+
+    Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleFriendsWnd()
+{
+  if (FriendsWnd.isAwake())
+  {
+     canvas.popDialog(FriendsWnd);
+     Tome_CommandText.makeFirstResponder(true);
+  }
+  else
+  {
+     canvas.pushDialog(FriendsWnd);
+     Tome_CommandText.makeFirstResponder(true);
+  }    
+
+}
+
+function TomeToggleReply()
+{
+
+    Py::CycleReply(0);
+
+}
+
+function TomeToggleCycleReply()
+{
+
+    Py::CycleReply(1);
+
+}
+
+function TomeToggleCycleReplyBackwards()
+{
+
+    Py::CycleReply(-1);
+
+}
+
+function TomeToggleEnter(%val)
+{
+    if (%val)
+       return;
+       
+    if (!TomeGui.isAwake())
+    {
+       Canvas.pushDialog(TomeGui);
+    }
+
+    if (!GameTextGui.isAwake())
+    {
+       Canvas.pushDialog(GameTextGui);
+    }
+
+    if (Tome_CommandText.visible && ChatGui.isAwake())
+    {
+
+        Tome_CommandText.makeFirstResponder(true);
+    }
+    else
+    {
+        if (!ChatGui.isAwake())
+        {
+            Canvas.pushDialog(ChatGui);
+        }
+        Tome_CommandText.visible = true;
+        //deactivateKeyboard();
+        Tome_CommandText.setValue("");
+        Tome_CommandText.makeFirstResponder(true);
+    }
+
+}
+
+function PushChatGui()
+{
+    if (!ChatGui.isAwake())
+	{
+    	Canvas.pushDialog(ChatGui);
+    }
+}
+
+function ToggleHelpWnd()
+{
+  if (HelpWnd.isAwake())
+     canvas.popDialog(HelpWnd);
+  else
+     canvas.pushDialog(HelpWnd);
+
+    Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleJournalWnd()
+{
+  if (JournalWnd.isAwake())
+     canvas.popDialog(JournalWnd);
+  else
+     canvas.pushDialog(JournalWnd);
+
+    Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function ToggleEncyclopediaWnd()
+{
+  if (EncyclopediaWnd.isAwake())
+     canvas.popDialog(EncyclopediaWnd);
+  else
+     canvas.pushDialog(EncyclopediaWnd);
+
+    Tome_CommandText.makeFirstResponder(true);
+
+}
+
+function TomeToggleSlash(%val)
+{
+    if (%val)
+        return; //ignore break
+
+    if (Tome_CommandText.visible && ChatGui.isAwake())
+    {
+        Tome_CommandText.setValue("/");
+        Tome_CommandText.makeFirstResponder(true);
+    }
+    else
+    {
+        if (!ChatGui.isAwake())
+        {
+            Canvas.pushDialog(ChatGui);
+        }
+
+        Tome_CommandText.visible = true;
+        //deactivateKeyboard();
+        Tome_CommandText.setValue("/");
+        Tome_CommandText.makeFirstResponder(true);
+    }
+
+}
+
+function Tome_CommandText::onEscape(%this)
+{
+   Tome_CommandText.visible = false;
+   Tome_CommandText.makeFirstResponder(false);
+   //activateKeyboard();
+}
+
+//------------------------------------------------------------------------------
+
+function Tome_CommandText::eval(%this)
+{
+   %text = trim(%this.getValue());
+   if(%text !$= "")
+   {
+
+     Py::DoCommand(%text);
+
+   }
+
+   // Clear command text and hide gui object.
+   Tome_CommandText.setValue("");
+   Tome_CommandText.visible = false;
+   Tome_CommandText.makeFirstResponder(false);
+   //activateKeyboard();
+}
+
+PyExec("mud/client/gui/tomeGui.py");
+

@@ -1,0 +1,128 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(WorldRegisterDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "MoMSolidWndProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "160 170";
+      extent = "320 140";
+      minExtent = "320 140";
+      visible = "1";
+      text = "World Registration";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "320 200";
+      closeCommand = "Canvas.popDialog(WorldRegisterDlg);";
+
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "34 35";
+         extent = "66 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Avatar Name:";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "162 83";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(WorldRegisterDlg);Py::OnWorldLoginCancel();";
+         text = "Cancel";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextEditCtrl(WORLDREGISTER_FANTASYNAME) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "103 35";
+         extent = "198 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$pref::FantasyName";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "15 83";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(WorldRegisterDlg);Py::OnWorldRegister();";
+         text = "Register";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl(WORLDREGISTER_PASSWORDTEXT) {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 56";
+         extent = "84 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "World Password:";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextEditCtrl(WORLDREGISTER_PLAYERPASSWORD) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "103 56";
+         extent = "198 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+//inludedin WorldLoginDlg.py
+//PyExec("mud/client/gui/worldRegisterDlg.py");

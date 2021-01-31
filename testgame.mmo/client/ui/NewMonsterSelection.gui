@@ -1,0 +1,141 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(NewMonsterSelection) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "MoMSolidWndProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "331 180";
+      extent = "361 408";
+      minExtent = "8 2";
+      visible = "1";
+      text = "Monster Selection";
+      maxLength = "255";
+      dropShadow = "0";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      isClickThru = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(NewMonsterSelection);";
+
+      new GuiScrollCtrl() {
+         profile = "MoMScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "14 92";
+         extent = "334 254";
+         minExtent = "8 2";
+         visible = "1";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+         childRelPos = "0 0";
+         childPos = "2 2";
+         contentPos = "2 2";
+
+         new GuiTextListCtrl(MOM_MONSTER_LIST) {
+            profile = "MoMBigScrollText";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "314 2";
+            minExtent = "8 2";
+            visible = "1";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "41 42";
+         extent = "80 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2Monster\'s Name:";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+      new GuiTextEditCtrl(MONSTER_NAME) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "128 41";
+         extent = "191 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         dropShadow = "0";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "31 354";
+         extent = "140 44";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Py::OnMakeMonster();";
+         text = "Make Monster!!!";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "MenuButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "191 354";
+         extent = "140 44";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(NewMonsterSelection);";
+         text = "Cancel";
+         mouseOver = "0";
+         hotKey = "-1";
+         toggleLocked = "0";
+         pulseRed = "0";
+         pulseGreen = "0";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "MoMStatText";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "137 72";
+         extent = "91 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "\c2Monster Templates";
+         maxLength = "255";
+         dropShadow = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

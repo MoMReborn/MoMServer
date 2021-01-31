@@ -1,0 +1,26 @@
+
+---+ Enchanting / Disenchanting
+
+
+At level 1 any Necromancer, Wizard or Revealer may learn the Enchanting and Disenchanting skills. To train these skills, you must first speak with [[SpawnIshaulYon][Ishaul Yon]] in [[ZoneTheCityOfTrinst][The City Of Trinst]] (FoL), [[SpawnHelaug][Helaug]] in [[ZoneTheCityOfKauldur][The City Of Kauldur]] (MoD) or [[SpawnMorpho][Morpho]] in [[ZoneHazerothKeep][Hazeroth Keep]] (Monsters).
+
+
+
+---++ Enchanting
+
+In general, all enchanting can be attempted at any Enchanting skill level (except for focus merging). Just remember that the lower your skill level and the higher the difficulty of the enchantment, the higher the chance for failure. Higher Enchanting skill levels will also help in reducing various costs needed for the enchantments.
+
+*Foci* <br>Every enchanting process needs at least one 'focus' or magical ingredient. Normally this focus is consumed in the process. There are two ways to obtain foci: random mob drops [[FocusLootDetails][(Focus Loot Details)]] and disenchanting. <br>Foci come in different qualities [[FocusMergingDetails][(Focus Merging Details)]] and with different powers they can help to enchant.
+
+*There are 4 types of Enchanting* <br>	1. Merging Foci: two identical foci can be combined into one of a higher quality -> [[FocusMergingDetails][Focus Merging Details]]. <br>	2. Enchanting Raw Foci: before being usable for item enchantments, a raw focus has to be enchanted separately -> [[FocusEnchantingDetails][Focus Enchanting Details]]. <br>	3. Spell Enchantments: crafted weapons and bows can be enchanted with various harmful spells for procs -> [[SpellEnchantingDetails][Spell Enchanting Details]]. <br>	4. Crafted Item Enchantments: any crafted item except arrows can be enchanted with various abilities -> [[CraftedItemEnchantments][Crafted Item Enchantments]].
+
+
+
+---++ Disenchanting
+
+All enchanted crafted items and non-soulbound artifacts can be disenchanted. To disenchant an item, place it in the crafting window and type '/disenchant' into your chatbox. Enchanted crafted items will be stripped of a single stat in this process, non-soulbound artifacts will be stripped of all attributes and result in a 'Powerless' artifact by default. On enchanted crafted items you can also specify which stat to strip, by using the command '/disenchant {attribute}'.
+
+Mana costs to disenchant an item are scaled by item level, number of present enchantments and the player's Disenchant skill level. <br>Upon successful disenchanting, the player may gain one or more raw foci [[FocusEnchantingDetails][(Focus Enchanting Details)]] and even trigger a mana regeneration buff which is scaled by Disenchanting skill level. The higher the Disenchanting skill, the higher the chance to get such a reward.
+
+
+*%RED%Warning: %ENDCOLOR%* a disenchantment can fail. Upon failure the disenchanting target will be completely destroyed and mana costs still have to be paid. The higher the level of the disenchanting target and the lower the player's Disenchanting skill level, the higher the chance for failure.
