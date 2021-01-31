@@ -1,6 +1,8 @@
 # Copyright (C) 2004-2007 Prairie Games, Inc
 # Please see LICENSE.TXT for details
 
+from mud_ext.gamesettings import override_ip_addresses
+override_ip_addresses()
 
 #world update script
 

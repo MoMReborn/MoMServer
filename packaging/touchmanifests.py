@@ -34,11 +34,6 @@ else:
         SaveManifest(cm,"../%s/common/manifest.zip"%OUTPUT_FOLDER,"../%s/common/manifest.sha"%OUTPUT_FOLDER)
 
     else:
-        from ConfigParser import SafeConfigParser
-
-        parser = SafeConfigParser()
-        parser.read("./serverconfig/server.cfg")
-
         # Local Repo
         OUTPUT_FOLDER = SERVER_SVN_WORKING_REPO
         

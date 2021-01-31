@@ -16,11 +16,6 @@ os.makedirs('./distrib/bin')
 
 from mud.gamesettings import GAMEROOT,SERVER_SVN_WORKING_REPO
 
-from ConfigParser import SafeConfigParser
-
-parser = SafeConfigParser()
-parser.read("./serverconfig/server.cfg")
-
 for arg in sys.argv:
     if arg.startswith("gameconfig="):
         sys.argv.remove(arg)

@@ -1,0 +1,14 @@
+*.pyc
+*.log
+log_*
+*backup*.db
+
+/common
+/mud
+/sqlobject
+/minions.of.mirth
+
+/main.cs.dso
+
+venv
+.idea

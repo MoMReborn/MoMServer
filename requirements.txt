@@ -1,0 +1,5 @@
+email==4.0.2
+pyasn1==0.4.8
+pycrypto==2.3
+Twisted==10.1.0
+zope.interface==5.2.0

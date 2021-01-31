@@ -1,6 +1,8 @@
 # Copyright (C) 2004-2007 Prairie Games, Inc
 # Please see LICENSE.TXT for details
 
+from mud_ext.gamesettings import override_ip_addresses
+override_ip_addresses()
 
 import imp
 import os
@@ -93,7 +95,7 @@ try:
                     wx.TAB_TRAVERSAL|wx.CLOSE_BOX)
                 
                 menu = wx.Menu()
-                menu.Append(wx.ID_EXIT,"E&xit","Terminate the program")
+                menu.Append(wx.ID_EXIT,"&Exit","Terminate the program")
                 menuBar = wx.MenuBar()
                 menuBar.Append(menu, "&File")
                 self.SetMenuBar(menuBar)
@@ -168,7 +170,8 @@ try:
     sys.argv.append("-game")
     sys.argv.append(GAMEROOT)
     
-    pytorque.Init(len(sys.argv),sys.argv)
+    print "Initialising pytoque with args: " + str(sys.argv)
+    pytorque.Init(sys.argv)
     
     if USE_WX:
         reactor.registerWxApp(app)
@@ -217,7 +220,7 @@ try:
     if win32process != None:
         win32process.SetPriorityClass(win32process.GetCurrentProcess(), \
             win32process.NORMAL_PRIORITY_CLASS)
-    
+
     pytorque.Shutdown()
 
 except:

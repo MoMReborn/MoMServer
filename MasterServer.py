@@ -6,17 +6,26 @@ override_ip_addresses()
 
 import imp, os, sys
 
+
 def main_is_frozen():
    return (hasattr(sys, "frozen") or # new py2exe
            hasattr(sys, "importers") # old py2exe
            or imp.is_frozen("__main__")) # tools/freeze
-           
+
+
 if main_is_frozen():
-    os.chdir("../common")
-    maindir = os.getcwd()
-    sys.path.append(maindir)    
+    #maindir = get_main_dir()
+    
+    if sys.platform[:6] == 'darwin':
+        #need to go up three folders
+        os.chdir("../../../mom")
+        maindir = os.getcwd()
+    else:
+        os.chdir("../common")
+        maindir = os.getcwd()
+    
+    sys.path.append(maindir)
 
-from mud_ext.worlddaemon.worldimp import main
+
+from mud_ext.masterserver.main import main
 main()
-
-

@@ -1,6 +1,8 @@
 # Copyright (C) 2004-2007 Prairie Games, Inc
 # Please see LICENSE.TXT for details
 
+from mud_ext.gamesettings import override_ip_addresses
+override_ip_addresses()
 
 import imp, os, sys
 
@@ -24,7 +26,7 @@ if main_is_frozen():
     sys.path.append(maindir)    
     
 
-from mud.worldserver.main import main
+from mud_ext.worldserver.main import main
 #import profile
 #profile.runctx("main()",globals(),locals(),"profile.prof")
 
